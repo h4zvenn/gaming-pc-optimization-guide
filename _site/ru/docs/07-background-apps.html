@@ -1,0 +1,836 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="dark">
+  <title>Фоновые приложения и автозагрузка — Универсальная оптимизация игрового ПК — 2026</title>
+  <meta name="description" content="Проверь автозагрузку, фоновую активность и ненужные приложения, не отключая важные компоненты Windows.">
+  <link rel="canonical" href="http://localhost:4000/ru/docs/07-background-apps.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Универсальная оптимизация игрового ПК — 2026">
+  <meta property="og:title" content="Фоновые приложения и автозагрузка">
+  <meta property="og:description" content="Проверь автозагрузку, фоновую активность и ненужные приложения, не отключая важные компоненты Windows.">
+  <meta property="og:url" content="http://localhost:4000/ru/docs/07-background-apps.html">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Фоновые приложения и автозагрузка">
+  <meta name="twitter:description" content="Проверь автозагрузку, фоновую активность и ненужные приложения, не отключая важные компоненты Windows.">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Универсальная оптимизация игрового ПК — 2026",
+      "url": "http://localhost:4000/ru/"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "http://localhost:4000/ru/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Windows",
+          "item": "http://localhost:4000/ru/docs/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Фоновые приложения и автозагрузка",
+          "item": "http://localhost:4000/ru/docs/07-background-apps.html"
+        }
+        
+        
+      ]
+    }
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Фоновые приложения и автозагрузка",
+      "description": "Проверь автозагрузку, фоновую активность и ненужные приложения, не отключая важные компоненты Windows.",
+      "inLanguage": "ru",
+      "mainEntityOfPage": "http://localhost:4000/ru/docs/07-background-apps.html"
+    }
+  </script>
+  
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="/" class="site-title">PC Optimizer</a>
+
+    <!-- Navigation -->
+    <nav class="site-nav desktop-nav">
+      
+        <a href="/" class="">
+          Home
+        </a>
+      
+        <a href="/docs/" class="">
+          Guides
+        </a>
+      
+        <a href="/downloads/" class="">
+          Downloads
+        </a>
+      
+        <a href="/docs/games/" class="">
+          Games
+        </a>
+      
+        <a href="/docs/hardware/" class="">
+          Hardware
+        </a>
+      
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions-group">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <div class="language-switcher">
+        
+          
+            <a href="/" class="lang-link">English</a>
+          
+        
+          
+            <span class="current-lang">Русский</span>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main id="main-content" class="site-main" tabindex="-1">
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" aria-label="Навигационная цепочка">
+  <ol>
+    <li><a href="/ru/">Главная</a></li>
+    
+    <li><a href="/ru/docs/">Windows</a></li>
+    
+    <li aria-current="page">Фоновые приложения и автозагрузка</li>
+  </ol>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="original-link"><a href="/docs/07-background-apps.html" hreflang="en" lang="en">Read the English original</a></p>
+
+
+<article class="doc">
+  <aside class="doc-nav">
+    <nav aria-label="Разделы">
+      <h3><a href="/ru/docs/">Руководства Windows</a></h3>
+      <ul>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/01-before-you-start.html">Подготовка перед оптимизацией</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/02-find-the-bottleneck.html">Поиск узкого места</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/03-bios-and-hardware.html">BIOS и оборудование</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/04-drivers-and-updates.html">Драйверы и обновления</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/05-windows-11.html">Настройки Windows 11</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/06-gpu-settings.html">Настройки видеокарты</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/07-background-apps.html" aria-current="page">Фоновые приложения и автозагрузка</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/08-services-and-security.html">Службы и безопасность</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/09-powershell-diagnostics.html">Диагностика через PowerShell</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/10-temperatures-stability.html">Температуры и стабильность</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/11-what-not-to-do.html">Чего не следует делать</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/12-faq.html">Частые вопросы</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/13-security-hardening-baseline.html">Базовая настройка безопасности</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/14-quick-start-presets.html">Стартовые наборы настроек</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/15-troubleshooting-decision-trees.html">Деревья поиска неисправностей</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/16-benchmark-templates.html">Шаблоны бенчмарков</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/17-common-builds-quick-cards.html">Типовые сборки</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/18-optimization-tools-evidence.html">Инструменты оптимизации</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/19-ai-software-and-disk-cleanup.html">Очистка диска и удаление ПО</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/20-network-and-wifi.html">Сеть, Wi-Fi и онлайн-задержка</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/21-laptops-and-handhelds.html">Ноутбуки и портативные ПК на Windows</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/22-streaming-and-capture.html">Стриминг и запись игры</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/23-overclocking-and-undervolting.html">Разгон и андервольтинг</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/24-safe-optimization-playbook.html">Практические безопасные процедуры оптимизации</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/start-here.html">С чего начать</a></li>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/ultimate-pc-gaming-guide-2026.html">Универсальная оптимизация игрового ПК — 2026</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/windows-10-legacy.html">Windows 10: заметки для legacy-игровых ПК</a></li>
+        
+        
+        
+      </ul>
+      <h3><a href="/ru/docs/games/">Руководства по играм</a></h3>
+      <ul>
+        <li><a href="/ru/docs/games/">Все игры</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/games/cs2.html">Counter-Strike 2</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/minecraft-java.html">Minecraft Java</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/pubg.html">PUBG: BATTLEGROUNDS</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/valorant.html">VALORANT</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/world-of-tanks.html">World of Tanks</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </nav>
+  </aside>
+  <div class="doc-content">
+    <h1>Фоновые приложения и автозагрузка</h1>
+    
+
+<blockquote>
+  <p>Не начинай с массового отключения служб и процессов.
+Сначала посмотри, что реально запускается вместе с Windows и что использует CPU, диск или сеть во время игры.</p>
+</blockquote>
+
+<h2 id="что-вы-узнаете">Что вы узнаете</h2>
+
+<ul>
+  <li>Как проверить автозагрузку.</li>
+  <li>Как понять, какие приложения нагружают систему.</li>
+  <li>Как безопасно отключить ненужный автозапуск.</li>
+  <li>Как вернуть приложение, если оно понадобилось.</li>
+</ul>
+
+<h2 id="перед-изменениями">Перед изменениями</h2>
+
+<p>Создай точку восстановления или хотя бы запиши, какие программы ты планируешь отключить.</p>
+
+<p>Не отключай:</p>
+
+<ul>
+  <li>Антивирус и защиту Windows.</li>
+  <li>Драйверы видеокарты и периферии.</li>
+  <li>Аудиосервисы.</li>
+  <li>Сетевые службы.</li>
+  <li>Системные обновления без понимания последствий.</li>
+</ul>
+
+<hr />
+
+<h2 id="1-проверь-автозагрузку-через-диспетчер-задач">1. Проверь автозагрузку через Диспетчер задач</h2>
+
+<p>Это самый безопасный способ.</p>
+
+<ol>
+  <li>Нажми <code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code>.</li>
+  <li>Открой вкладку <code class="language-plaintext highlighter-rouge">Автозагрузка приложений</code>.</li>
+  <li>Посмотри столбцы <code class="language-plaintext highlighter-rouge">Состояние</code> и <code class="language-plaintext highlighter-rouge">Влияние на запуск</code>.</li>
+  <li>Отключай только те приложения, которые не нужны сразу после включения ПК.</li>
+</ol>
+
+<p>Хорошие кандидаты на отключение:</p>
+
+<ul>
+  <li>Discord.</li>
+  <li>Epic Games Launcher.</li>
+  <li>Riot Client.</li>
+  <li>Roblox.</li>
+  <li>Spotify.</li>
+  <li>Облачные клиенты, если синхронизация не нужна постоянно.</li>
+</ul>
+
+<p>Не отключай без необходимости:</p>
+
+<ul>
+  <li>Steam, если ты играешь каждый день.</li>
+  <li>NVIDIA App или AMD Software.</li>
+  <li>Logitech G HUB, Razer Synapse и другое ПО периферии.</li>
+  <li>Антивирус.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-проверь-автозагрузку-через-powershell">2. Проверь автозагрузку через PowerShell</h2>
+
+<p>Для базового просмотра процессов и автозагрузки используй пункт 2 в <a href="09-powershell-diagnostics.html">меню диагностики</a>. Оно только показывает сведения и ничего не отключает. Команды ниже оставлены для точечной проверки расположения элементов автозагрузки.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"</span><span class="se">`n</span><span class="s2">===== АВТОЗАГРУЗКА ====="</span><span class="w">
+
+</span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"</span><span class="se">`n</span><span class="s2">--- Реестр текущего пользователя ---"</span><span class="w">
+</span><span class="n">Get-ItemProperty</span><span class="w"> </span><span class="s1">'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run'</span><span class="w"> </span><span class="nt">-ErrorAction</span><span class="w"> </span><span class="nx">SilentlyContinue</span><span class="w"> </span><span class="o">|</span><span class="w">
+    </span><span class="n">Select-Object</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">-ExcludeProperty</span><span class="w"> </span><span class="nx">PS</span><span class="o">*</span><span class="w"> </span><span class="o">|</span><span class="w">
+    </span><span class="n">Format-List</span><span class="w">
+
+</span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"</span><span class="se">`n</span><span class="s2">--- Команды автозагрузки WMI ---"</span><span class="w">
+</span><span class="n">Get-CimInstance</span><span class="w"> </span><span class="nx">Win32_StartupCommand</span><span class="w"> </span><span class="o">|</span><span class="w">
+    </span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Command</span><span class="p">,</span><span class="w"> </span><span class="nx">Location</span><span class="w"> </span><span class="o">|</span><span class="w">
+    </span><span class="n">Format-List</span><span class="w">
+
+</span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"</span><span class="se">`n</span><span class="s2">--- Папка автозагрузки ---"</span><span class="w">
+</span><span class="n">Get-ChildItem</span><span class="w"> </span><span class="s2">"</span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">APPDATA</span><span class="s2">\Microsoft\Windows\Start Menu\Programs\Startup"</span><span class="w"> </span><span class="nt">-ErrorAction</span><span class="w"> </span><span class="nx">SilentlyContinue</span><span class="w"> </span><span class="o">|</span><span class="w">
+    </span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">FullName</span><span class="w"> </span><span class="o">|</span><span class="w">
+    </span><span class="n">Format-List</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="что-означают-результаты">Что означают результаты</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">HKCU</code> — автозагрузка текущего пользователя.</li>
+  <li><code class="language-plaintext highlighter-rouge">Win32_StartupCommand</code> — общая информация о командах автозапуска.</li>
+  <li>Папка <code class="language-plaintext highlighter-rouge">Startup</code> — ярлыки программ, запускаемых при входе в Windows.</li>
+</ul>
+
+<hr />
+
+<h2 id="3-отключи-ненужные-приложения">3. Отключи ненужные приложения</h2>
+
+<p>Скрипт удаляет только записи автозапуска из реестра текущего пользователя. Сами программы остаются установленными.</p>
+
+<p>Перед запуском проверь список <code class="language-plaintext highlighter-rouge">$disable</code> и оставь только те приложения, которые действительно не нужны в автозагрузке.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$run</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run'</span><span class="w">
+
+</span><span class="nv">$disable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@(</span><span class="w">
+    </span><span class="s1">'Discord'</span><span class="p">,</span><span class="w">
+    </span><span class="s1">'RiotClient'</span><span class="p">,</span><span class="w">
+    </span><span class="s1">'RobloxPlayerBeta'</span><span class="w">
+    </span><span class="c"># 'Steam',</span><span class="w">
+    </span><span class="c"># 'LGHUB'</span><span class="w">
+</span><span class="p">)</span><span class="w">
+
+</span><span class="kr">foreach</span><span class="w"> </span><span class="p">(</span><span class="nv">$name</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$disable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">Get-ItemProperty</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="nv">$run</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$name</span><span class="w"> </span><span class="nt">-ErrorAction</span><span class="w"> </span><span class="nx">SilentlyContinue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">Remove-ItemProperty</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="nv">$run</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$name</span><span class="w">
+        </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"ОТКЛЮЧЕНО: </span><span class="nv">$name</span><span class="s2">"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"НЕ НАЙДЕНО: </span><span class="nv">$name</span><span class="s2">"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="рекомендации">Рекомендации</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Приложение</th>
+      <th>Рекомендация</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Discord</td>
+      <td>Отключить автозапуск, если не нужен сразу</td>
+    </tr>
+    <tr>
+      <td>Riot Client</td>
+      <td>Отключить, если не играешь в игры Riot ежедневно</td>
+    </tr>
+    <tr>
+      <td>Roblox</td>
+      <td>Отключить автозапуск</td>
+    </tr>
+    <tr>
+      <td>Steam</td>
+      <td>По желанию</td>
+    </tr>
+    <tr>
+      <td>Epic Games Launcher</td>
+      <td>Отключить, если не нужен постоянно</td>
+    </tr>
+    <tr>
+      <td>Spotify</td>
+      <td>Отключить, если не нужен сразу</td>
+    </tr>
+    <tr>
+      <td>Logitech G HUB</td>
+      <td>Обычно не отключать</td>
+    </tr>
+    <tr>
+      <td>NVIDIA App</td>
+      <td>Не отключать</td>
+    </tr>
+    <tr>
+      <td>AMD Software</td>
+      <td>Не отключать</td>
+    </tr>
+    <tr>
+      <td>Антивирус</td>
+      <td>Не отключать</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="4-проверь-фоновую-активность-во-время-игры">4. Проверь фоновую активность во время игры</h2>
+
+<p>Автозагрузка — не единственный источник нагрузки. Во время игры проверь Диспетчер задач.</p>
+
+<h3 id="что-смотреть">Что смотреть</h3>
+
+<ol>
+  <li>Открой <code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code>.</li>
+  <li>Перейди в <code class="language-plaintext highlighter-rouge">Процессы</code>.</li>
+  <li>Отсортируй по <code class="language-plaintext highlighter-rouge">ЦП</code>, <code class="language-plaintext highlighter-rouge">Память</code> и <code class="language-plaintext highlighter-rouge">Диск</code>.</li>
+  <li>Запусти игру и посмотри, какие процессы создают нагрузку.</li>
+</ol>
+
+<h3 id="частые-источники-нагрузки">Частые источники нагрузки</h3>
+
+<ul>
+  <li>Браузер с большим количеством вкладок.</li>
+  <li>Обновления Steam, Epic Games, Windows.</li>
+  <li>Облачная синхронизация.</li>
+  <li>Загрузка игр или модов.</li>
+  <li>Стриминг и запись экрана.</li>
+  <li>Антивирусная проверка.</li>
+</ul>
+
+<hr />
+
+<h2 id="5-проверь-результат">5. Проверь результат</h2>
+
+<p>После отключения автозагрузки перезагрузи ПК и сравни:</p>
+
+<ul>
+  <li>Время загрузки Windows.</li>
+  <li>Количество фоновых процессов.</li>
+  <li>Загрузку CPU и диска сразу после запуска.</li>
+  <li>FPS и время кадра в игре.</li>
+</ul>
+
+<p>Повтори тот же тест, что и до изменений.</p>
+
+<hr />
+
+<h2 id="как-вернуть-приложение">Как вернуть приложение</h2>
+
+<p>Открой приложение вручную и включи автозапуск в его настройках.</p>
+
+<p>Например:</p>
+
+<ul>
+  <li>Discord: <code class="language-plaintext highlighter-rouge">Настройки</code> → <code class="language-plaintext highlighter-rouge">Настройки приложения</code> → <code class="language-plaintext highlighter-rouge">Запускать Discord при включении компьютера</code>.</li>
+  <li>Steam: <code class="language-plaintext highlighter-rouge">Steam</code> → <code class="language-plaintext highlighter-rouge">Настройки</code> → <code class="language-plaintext highlighter-rouge">Интерфейс</code> → <code class="language-plaintext highlighter-rouge">Запускать Steam при запуске компьютера</code>.</li>
+  <li>Riot Client: включи соответствующую опцию в настройках клиента.</li>
+</ul>
+
+<hr />
+
+<h2 id="итог">Итог</h2>
+
+<p>Теперь у тебя меньше ненужных фоновых процессов и более предсказуемая нагрузка на систему.</p>
+
+<p>Следующий шаг:<br />
+<a href="/ru/docs/08-services-and-security.html">Службы и безопасность — RU</a>.</p>
+
+    <a class="back-to-top" href="#main-content">Наверх</a>
+  </div>
+
+  
+  <aside class="doc-sidebar">
+    <details class="doc-toc" open>
+      <summary>На этой странице</summary>
+      <nav aria-label="На этой странице">
+        <ol id="table-of-contents"></ol>
+      </nav>
+    </details>
+  </aside>
+  
+</article>
+
+
+
+
+
+<nav class="page-navigation" aria-label="Навигация по руководствам">
+  
+  <a class="page-navigation-link page-navigation-previous" href="/ru/docs/06-gpu-settings.html">
+    <span>Предыдущая страница</span>
+    <strong>Настройки видеокарты</strong>
+  </a>
+  
+  
+  <a class="page-navigation-link page-navigation-next" href="/ru/docs/08-services-and-security.html">
+    <span>Следующая страница</span>
+    <strong>Службы и безопасность</strong>
+  </a>
+  
+</nav>
+
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Найди узкое место. Измени одну настройку. Измерь результат.</p>
+      <p>Универсальная оптимизация игрового ПК — 2026 · MIT License</p>
+      <div class="footer-links">
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide">GitHub</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/issues">Сообщить об ошибке</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/discussions">Обсуждения</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const content = document.querySelector('.doc-content');
+      const toc = document.querySelector('#table-of-contents');
+      
+      // Check if TOC is disabled for this page using data attribute or class
+      const docElement = document.querySelector('.doc');
+      const tocDisabled = docElement && docElement.classList.contains('toc-disabled');
+      
+      if (content && toc && !tocDisabled) {
+        content.querySelectorAll('h2, h3').forEach((heading, index) => {
+          if (!heading.id) {
+            heading.id = `section-${index + 1}`;
+          }
+          const item = document.createElement('li');
+          if (heading.tagName === 'H3') {
+            item.classList.add('toc-subitem');
+          }
+          const link = document.createElement('a');
+          link.href = `#${heading.id}`;
+          link.textContent = heading.textContent.trim();
+          item.appendChild(link);
+          toc.appendChild(item);
+        });
+        if (toc.children.length === 0) {
+          toc.closest('.doc-sidebar').hidden = true;
+        }
+      } else if (tocDisabled) {
+        // If TOC is disabled, hide the sidebar
+        const docSidebar = document.querySelector('.doc-sidebar');
+        if (docSidebar) {
+          docSidebar.hidden = true;
+        }
+      }
+
+      const labels = {
+        copy: 'Копировать',
+        copied: 'Скопировано',
+        failed: 'Не удалось скопировать'
+      };
+
+      document.querySelectorAll('main pre > code').forEach((code) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'copy-button';
+        button.textContent = labels.copy;
+        button.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(code.innerText);
+            button.textContent = labels.copied;
+          } catch {
+            button.textContent = labels.failed;
+          }
+          window.setTimeout(() => {
+            button.textContent = labels.copy;
+          }, 2000);
+        });
+        code.parentElement.appendChild(button);
+      });
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="{{ '/' | relative_url }}" class="site-title">PC Optimizer</a>
+
+    <!-- Navigation -->
+    <nav class="site-nav desktop-nav">
+      {% for item in site.data.navigation.main %}
+        <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}">
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions-group">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <div class="language-switcher">
+        {% for lang in site.data.navigation.languages %}
+          {% if lang.code == page.lang %}
+            <span class="current-lang">{{ lang.name }}</span>
+          {% else %}
+            <a href="{{ lang.url | relative_url }}" class="lang-link">{{ lang.name }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,45 @@
+/* Hero section styles */
+.home-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: clamp(400px, 60vh, 600px);
+  background: url('/assets/img/hero-bg.jpg') center/cover no-repeat;
+}
+
+/* Dark overlay (optional) */
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+}
+
+.home-hero-text {
+  position: relative; /* above overlay */
+  text-align: center;
+  max-width: 90%;
+  color: var(--text);
+}
+
+/* Text styles */
+.hero-eyebrow {
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+.home-hero-text h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin: .5rem 0;
+  animation: fadeIn 1.8s ease-out both;
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  margin-bottom: 1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(.3rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}

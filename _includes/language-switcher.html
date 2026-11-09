@@ -1,0 +1,11 @@
+<div class="language-switcher">
+  {% for lang in site.data.navigation.languages %}
+    {% if lang.code == page.lang %}
+      <span class="current-lang">{{ lang.name }}</span>
+    {% else %}
+      <a href="{{ lang.url | relative_url }}" class="lang-link">
+        {{ lang.name }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

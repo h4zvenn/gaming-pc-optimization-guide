@@ -1,0 +1,784 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="dark">
+  <title>Диагностика через PowerShell — Универсальная оптимизация игрового ПК — 2026</title>
+  <meta name="description" content="Безопасная проверка компонентов, драйверов, служб, сети и ошибок Windows.">
+  <link rel="canonical" href="http://localhost:4000/ru/docs/09-powershell-diagnostics.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Универсальная оптимизация игрового ПК — 2026">
+  <meta property="og:title" content="Диагностика через PowerShell">
+  <meta property="og:description" content="Безопасная проверка компонентов, драйверов, служб, сети и ошибок Windows.">
+  <meta property="og:url" content="http://localhost:4000/ru/docs/09-powershell-diagnostics.html">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Диагностика через PowerShell">
+  <meta name="twitter:description" content="Безопасная проверка компонентов, драйверов, служб, сети и ошибок Windows.">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Универсальная оптимизация игрового ПК — 2026",
+      "url": "http://localhost:4000/ru/"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "http://localhost:4000/ru/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Windows",
+          "item": "http://localhost:4000/ru/docs/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Диагностика через PowerShell",
+          "item": "http://localhost:4000/ru/docs/09-powershell-diagnostics.html"
+        }
+        
+        
+      ]
+    }
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Диагностика через PowerShell",
+      "description": "Безопасная проверка компонентов, драйверов, служб, сети и ошибок Windows.",
+      "inLanguage": "ru",
+      "mainEntityOfPage": "http://localhost:4000/ru/docs/09-powershell-diagnostics.html"
+    }
+  </script>
+  
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="/" class="site-title">PC Optimizer</a>
+
+    <!-- Navigation -->
+    <nav class="site-nav desktop-nav">
+      
+        <a href="/" class="">
+          Home
+        </a>
+      
+        <a href="/docs/" class="">
+          Guides
+        </a>
+      
+        <a href="/downloads/" class="">
+          Downloads
+        </a>
+      
+        <a href="/docs/games/" class="">
+          Games
+        </a>
+      
+        <a href="/docs/hardware/" class="">
+          Hardware
+        </a>
+      
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions-group">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <div class="language-switcher">
+        
+          
+            <a href="/" class="lang-link">English</a>
+          
+        
+          
+            <span class="current-lang">Русский</span>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main id="main-content" class="site-main" tabindex="-1">
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" aria-label="Навигационная цепочка">
+  <ol>
+    <li><a href="/ru/">Главная</a></li>
+    
+    <li><a href="/ru/docs/">Windows</a></li>
+    
+    <li aria-current="page">Диагностика через PowerShell</li>
+  </ol>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="original-link"><a href="/docs/09-powershell-diagnostics.html" hreflang="en" lang="en">Read the English original</a></p>
+
+
+<article class="doc">
+  <aside class="doc-nav">
+    <nav aria-label="Разделы">
+      <h3><a href="/ru/docs/">Руководства Windows</a></h3>
+      <ul>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/01-before-you-start.html">Подготовка перед оптимизацией</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/02-find-the-bottleneck.html">Поиск узкого места</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/03-bios-and-hardware.html">BIOS и оборудование</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/04-drivers-and-updates.html">Драйверы и обновления</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/05-windows-11.html">Настройки Windows 11</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/06-gpu-settings.html">Настройки видеокарты</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/07-background-apps.html">Фоновые приложения и автозагрузка</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/08-services-and-security.html">Службы и безопасность</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/09-powershell-diagnostics.html" aria-current="page">Диагностика через PowerShell</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/10-temperatures-stability.html">Температуры и стабильность</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/11-what-not-to-do.html">Чего не следует делать</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/12-faq.html">Частые вопросы</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/13-security-hardening-baseline.html">Базовая настройка безопасности</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/14-quick-start-presets.html">Стартовые наборы настроек</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/15-troubleshooting-decision-trees.html">Деревья поиска неисправностей</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/16-benchmark-templates.html">Шаблоны бенчмарков</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/17-common-builds-quick-cards.html">Типовые сборки</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/18-optimization-tools-evidence.html">Инструменты оптимизации</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/19-ai-software-and-disk-cleanup.html">Очистка диска и удаление ПО</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/20-network-and-wifi.html">Сеть, Wi-Fi и онлайн-задержка</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/21-laptops-and-handhelds.html">Ноутбуки и портативные ПК на Windows</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/22-streaming-and-capture.html">Стриминг и запись игры</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/23-overclocking-and-undervolting.html">Разгон и андервольтинг</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/24-safe-optimization-playbook.html">Практические безопасные процедуры оптимизации</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/start-here.html">С чего начать</a></li>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/ultimate-pc-gaming-guide-2026.html">Универсальная оптимизация игрового ПК — 2026</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/windows-10-legacy.html">Windows 10: заметки для legacy-игровых ПК</a></li>
+        
+        
+        
+      </ul>
+      <h3><a href="/ru/docs/games/">Руководства по играм</a></h3>
+      <ul>
+        <li><a href="/ru/docs/games/">Все игры</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/games/cs2.html">Counter-Strike 2</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/minecraft-java.html">Minecraft Java</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/pubg.html">PUBG: BATTLEGROUNDS</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/valorant.html">VALORANT</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/world-of-tanks.html">World of Tanks</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </nav>
+  </aside>
+  <div class="doc-content">
+    <h1>Диагностика через PowerShell</h1>
+    
+
+<p>Используй PowerShell для диагностики, а не для запуска случайных скриптов «ускорения FPS».</p>
+
+<blockquote>
+  <p>Английский оригинал: <a href="../../docs/09-powershell-diagnostics.html">PowerShell Diagnostics</a>.</p>
+</blockquote>
+
+<h2 id="меню-диагностики-без-изменений">Меню диагностики без изменений</h2>
+
+<p>Если удобнее запускать проверки через меню, скачай <a href="https://raw.githubusercontent.com/h4zvenn/gaming-pc-optimization-guide/main/tools/GamingPCGuide-Diagnostics.bat">GamingPCGuide-Diagnostics.bat</a> и <a href="https://raw.githubusercontent.com/h4zvenn/gaming-pc-optimization-guide/main/tools/GamingPCGuide-Diagnostics.ps1">GamingPCGuide-Diagnostics.ps1</a> в одну папку, затем запусти BAT-файл. Меню объединяет диагностические проверки ниже и не требует прав администратора. Оно не меняет настройки. Для локального отчёта выбери один или несколько разделов либо все разделы; перед созданием файла меню перечислит типы данных, которые могут в него попасть, и попросит ввести <code class="language-plaintext highlighter-rouge">YES</code>. Отчёт остаётся на компьютере и никуда не отправляется. После проверок выводится сводка с результатами, отсутствующими данными и ошибками. В отчёте могут быть имена устройств, сведения о сети, имя пользователя, команды автозагрузки и пути к файлам — проверь его перед отправкой другим.</p>
+
+<p>Проверка сети выполняет DNS-запросы и ICMP-тесты; можно указать домен или IP игрового сервера. Сервер может блокировать ICMP, поэтому неудачный ping не доказывает проблему соединения с игрой. BAT использует текущую политику выполнения PowerShell и не обходит её. Если Windows блокирует скачанный скрипт, сначала проверь его исходный код и не ослабляй политику. На личном ПК можно разрешить запуск только проверенных файлов через их свойства (<strong>Свойства → Разблокировать</strong>). На рабочем или управляемом ПК обратись к администратору либо используй команды ниже. Изменение служб, восстановление Windows, очистка кэша и другие действия, меняющие систему, намеренно не автоматизированы. Команды в этой главе оставлены как ручной справочник.</p>
+
+<h2 id="открой-powershell">Открой PowerShell</h2>
+
+<p>Обычный режим: нажми <code class="language-plaintext highlighter-rouge">Win</code>, найди <code class="language-plaintext highlighter-rouge">Windows Terminal</code> или <code class="language-plaintext highlighter-rouge">PowerShell</code> и открой приложение. Большинству команд ниже не нужны права администратора. Запускай терминал с повышенными правами только когда это прямо указано; не запускай неизвестные команды.</p>
+
+<h2 id="сведения-о-компонентах">Сведения о компонентах</h2>
+
+<h3 id="процессор">Процессор</h3>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-CimInstance</span><span class="w"> </span><span class="nx">Win32_Processor</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Manufacturer</span><span class="p">,</span><span class="w"> </span><span class="nx">NumberOfCores</span><span class="p">,</span><span class="w"> </span><span class="nx">NumberOfLogicalProcessors</span><span class="p">,</span><span class="w">
+</span><span class="n">CurrentClockSpeed</span><span class="p">,</span><span class="w"> </span><span class="nx">MaxClockSpeed</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="видеокарта-и-драйвер">Видеокарта и драйвер</h3>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-CimInstance</span><span class="w"> </span><span class="nx">Win32_VideoController</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">VideoProcessor</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverVersion</span><span class="p">,</span><span class="w"> </span><span class="nx">DriverDate</span><span class="p">,</span><span class="w">
+</span><span class="n">CurrentHorizontalResolution</span><span class="p">,</span><span class="w"> </span><span class="nx">CurrentVerticalResolution</span><span class="p">,</span><span class="w"> </span><span class="nx">CurrentRefreshRate</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Если частота монитора указана неверно, проверь: <strong>Параметры → Система → Дисплей → Расширенный дисплей</strong>.</p>
+
+<h3 id="оперативная-память">Оперативная память</h3>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-CimInstance</span><span class="w"> </span><span class="nx">Win32_PhysicalMemory</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Manufacturer</span><span class="p">,</span><span class="w"> </span><span class="nx">PartNumber</span><span class="p">,</span><span class="w"> </span><span class="nx">Capacity</span><span class="p">,</span><span class="w"> </span><span class="nx">Speed</span><span class="p">,</span><span class="w"> </span><span class="nx">ConfiguredClockSpeed</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Общий объём памяти в ГБ:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">math</span><span class="p">]::</span><span class="n">Round</span><span class="p">(</span><span class="w">
+    </span><span class="p">(</span><span class="n">Get-CimInstance</span><span class="w"> </span><span class="nx">Win32_PhysicalMemory</span><span class="w"> </span><span class="o">|</span><span class="w">
+    </span><span class="n">Measure-Object</span><span class="w"> </span><span class="nt">-Property</span><span class="w"> </span><span class="nx">Capacity</span><span class="w"> </span><span class="nt">-Sum</span><span class="p">)</span><span class="o">.</span><span class="nf">Sum</span><span class="w"> </span><span class="nx">/</span><span class="w"> </span><span class="nx">1GB</span><span class="p">,</span><span class="w">
+    </span><span class="mi">0</span><span class="w">
+</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="диски-и-свободное-место">Диски и свободное место</h3>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-PSDrive</span><span class="w"> </span><span class="nt">-PSProvider</span><span class="w"> </span><span class="nx">FileSystem</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w">
+</span><span class="p">@{</span><span class="nx">Name</span><span class="o">=</span><span class="s1">'UsedGB'</span><span class="p">;</span><span class="nx">Expression</span><span class="o">=</span><span class="p">{[</span><span class="n">math</span><span class="p">]::</span><span class="n">Round</span><span class="p">(</span><span class="bp">$_</span><span class="o">.</span><span class="nf">Used</span><span class="w"> </span><span class="n">/</span><span class="w"> </span><span class="nx">1GB</span><span class="p">,</span><span class="w"> </span><span class="nx">1</span><span class="p">)}},</span><span class="w">
+</span><span class="p">@{</span><span class="nx">Name</span><span class="o">=</span><span class="s1">'FreeGB'</span><span class="p">;</span><span class="nx">Expression</span><span class="o">=</span><span class="p">{[</span><span class="n">math</span><span class="p">]::</span><span class="n">Round</span><span class="p">(</span><span class="bp">$_</span><span class="o">.</span><span class="nf">Free</span><span class="w"> </span><span class="n">/</span><span class="w"> </span><span class="nx">1GB</span><span class="p">,</span><span class="w"> </span><span class="nx">1</span><span class="p">)}}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-PhysicalDisk</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">FriendlyName</span><span class="p">,</span><span class="w"> </span><span class="nx">MediaType</span><span class="p">,</span><span class="w"> </span><span class="nx">BusType</span><span class="p">,</span><span class="w"> </span><span class="nx">HealthStatus</span><span class="p">,</span><span class="w">
+</span><span class="n">OperationalStatus</span><span class="p">,</span><span class="w"> </span><span class="nx">Size</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="план-питания">План питания</h2>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">powercfg</span><span class="w"> </span><span class="nx">/getactivescheme</span><span class="w">
+</span><span class="n">powercfg</span><span class="w"> </span><span class="nx">/list</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Отчёт <code class="language-plaintext highlighter-rouge">powercfg /energy</code> требует терминал администратора; используй его только при диагностике конкретной проблемы питания.</p>
+
+<h2 id="автозагрузка-и-процессы">Автозагрузка и процессы</h2>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-CimInstance</span><span class="w"> </span><span class="nx">Win32_StartupCommand</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Command</span><span class="p">,</span><span class="w"> </span><span class="nx">Location</span><span class="p">,</span><span class="w"> </span><span class="nx">User</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Отключай выбранные приложения через <strong>Диспетчер задач → Автозагрузка приложений</strong>. См. <a href="07-background-apps.html">фоновые приложения</a>.</p>
+
+<p>Наибольшее накопленное процессорное время:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-Process</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Sort-Object</span><span class="w"> </span><span class="nx">CPU</span><span class="w"> </span><span class="nt">-Descending</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nt">-First</span><span class="w"> </span><span class="nx">20</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Id</span><span class="p">,</span><span class="w"> </span><span class="nx">CPU</span><span class="p">,</span><span class="w"> </span><span class="nx">WorkingSet64</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Наибольшее потребление памяти:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-Process</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Sort-Object</span><span class="w"> </span><span class="nx">WorkingSet64</span><span class="w"> </span><span class="nt">-Descending</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nt">-First</span><span class="w"> </span><span class="nx">20</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Id</span><span class="p">,</span><span class="w">
+</span><span class="p">@{</span><span class="nx">Name</span><span class="o">=</span><span class="s1">'RAM_MB'</span><span class="p">;</span><span class="nx">Expression</span><span class="o">=</span><span class="p">{[</span><span class="n">math</span><span class="p">]::</span><span class="n">Round</span><span class="p">(</span><span class="bp">$_</span><span class="o">.</span><span class="nf">WorkingSet64</span><span class="w"> </span><span class="n">/</span><span class="w"> </span><span class="nx">1MB</span><span class="p">,</span><span class="w"> </span><span class="nx">0</span><span class="p">)}}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Найти, например, процесс Discord:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-Process</span><span class="w"> </span><span class="o">*</span><span class="nx">discord</span><span class="o">*</span><span class="w"> </span><span class="nt">-ErrorAction</span><span class="w"> </span><span class="nx">SilentlyContinue</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Id</span><span class="p">,</span><span class="w"> </span><span class="nx">CPU</span><span class="p">,</span><span class="w"> </span><span class="nx">WorkingSet64</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Не завершай неизвестные или системные процессы наугад.</p>
+
+<h2 id="службы">Службы</h2>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-Service</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Where-Object</span><span class="w"> </span><span class="nx">Status</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="s1">'Running'</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Sort-Object</span><span class="w"> </span><span class="nx">DisplayName</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Status</span><span class="p">,</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">DisplayName</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Службы с автоматическим запуском:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-CimInstance</span><span class="w"> </span><span class="nx">Win32_Service</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Where-Object</span><span class="w"> </span><span class="nx">StartMode</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="s1">'Auto'</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Sort-Object</span><span class="w"> </span><span class="nx">DisplayName</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">DisplayName</span><span class="p">,</span><span class="w"> </span><span class="nx">State</span><span class="p">,</span><span class="w"> </span><span class="nx">StartMode</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Поиск по части имени, например аудио:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-Service</span><span class="w"> </span><span class="o">*</span><span class="nx">audio</span><span class="o">*</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Status</span><span class="p">,</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">DisplayName</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Не меняй службы массово. См. <a href="08-services-and-security.html">службы и безопасность</a>.</p>
+
+<h2 id="сеть">Сеть</h2>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-NetIPConfiguration</span><span class="w">
+</span><span class="nx">Get-NetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">InterfaceDescription</span><span class="p">,</span><span class="w"> </span><span class="nx">Status</span><span class="p">,</span><span class="w"> </span><span class="nx">LinkSpeed</span><span class="p">,</span><span class="w"> </span><span class="nx">MacAddress</span><span class="w">
+</span><span class="n">Resolve-DnsName</span><span class="w"> </span><span class="nx">microsoft.com</span><span class="w">
+</span><span class="n">Test-Connection</span><span class="w"> </span><span class="nx">1.1.1.1</span><span class="w"> </span><span class="nt">-Count</span><span class="w"> </span><span class="nx">10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Тест <code class="language-plaintext highlighter-rouge">1.1.1.1</code> проверяет базовую связь, а не задержку до игрового сервера. Для теста игрового соединения:</p>
+
+<ol>
+  <li>Определи регион или адрес сервера по лаунчеру или журналам игры.</li>
+  <li>Проведи проверку задержки и потерь пакетов в течение 5–10 минут.</li>
+  <li>Запиши минимум, среднее, максимум и потери.</li>
+  <li>При необходимости сравни Wi-Fi и Ethernet.</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">Test-Connection</code> использует ICMP: сервер или Firewall может блокировать запросы. Неудачный ping сам по себе не доказывает проблему соединения с игрой. Перед тестом приостанови загрузки, синхронизацию, торренты и потоковое видео.</p>
+
+<h2 id="целостность-системных-файлов">Целостность системных файлов</h2>
+
+<p>Используй следующие команды только при подозрении на повреждение Windows. Они требуют терминала администратора и могут выполняться долго. Сначала DISM проверяет и восстанавливает хранилище компонентов, затем SFC проверяет защищённые системные файлы:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DISM</span><span class="w"> </span><span class="nx">/Online</span><span class="w"> </span><span class="nx">/Cleanup-Image</span><span class="w"> </span><span class="nx">/RestoreHealth</span><span class="w">
+</span></code></pre></div></div>
+
+<p>После завершения DISM:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sfc</span><span class="w"> </span><span class="nx">/scannow</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Перезагрузи компьютер после проверки. Если проблема осталась, проверь журнал CBS и <a href="https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/repair-a-windows-image?view=windows-11">инструкции Microsoft</a>.</p>
+
+<h2 id="журналы-событий-и-whea">Журналы событий и WHEA</h2>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-WinEvent</span><span class="w"> </span><span class="nt">-FilterHashtable</span><span class="w"> </span><span class="p">@{</span><span class="w">
+    </span><span class="nx">LogName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'System'</span><span class="w">
+    </span><span class="nx">ProviderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Microsoft-Windows-WHEA-Logger'</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="nt">-MaxEvents</span><span class="w"> </span><span class="nx">20</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">TimeCreated</span><span class="p">,</span><span class="w"> </span><span class="nx">Id</span><span class="p">,</span><span class="w"> </span><span class="nx">LevelDisplayName</span><span class="p">,</span><span class="w"> </span><span class="nx">Message</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Если ошибки WHEA появились после разгона, андервольтинга, XMP/EXPO, PBO или Curve Optimizer, вернись к стабильным параметрам и повтори тест.</p>
+
+<h2 id="сохранение-диагностики">Сохранение диагностики</h2>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">systeminfo</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Out-File</span><span class="w"> </span><span class="nt">-Encoding</span><span class="w"> </span><span class="nx">utf8</span><span class="w"> </span><span class="s2">"</span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">USERPROFILE</span><span class="s2">\Desktop\systeminfo.txt"</span><span class="w">
+</span><span class="n">driverquery</span><span class="w"> </span><span class="nx">/v</span><span class="w"> </span><span class="nx">/fo</span><span class="w"> </span><span class="nx">csv</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Out-File</span><span class="w"> </span><span class="nt">-Encoding</span><span class="w"> </span><span class="nx">utf8</span><span class="w"> </span><span class="s2">"</span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">USERPROFILE</span><span class="s2">\Desktop\drivers.csv"</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="проверка">Проверка</h2>
+
+<ul>
+  <li>Используй каждую команду для конкретного вопроса.</li>
+  <li>Применяй режим администратора только при необходимости.</li>
+  <li>Проверяй вывод и сравнивай FPS, 1% low, время кадра и стабильность.</li>
+  <li>Не изменяй неизвестные процессы и службы.</li>
+</ul>
+
+<p>Следующий шаг: <a href="10-temperatures-stability.html">температуры и стабильность</a>.</p>
+
+    <a class="back-to-top" href="#main-content">Наверх</a>
+  </div>
+
+  
+  <aside class="doc-sidebar">
+    <details class="doc-toc" open>
+      <summary>На этой странице</summary>
+      <nav aria-label="На этой странице">
+        <ol id="table-of-contents"></ol>
+      </nav>
+    </details>
+  </aside>
+  
+</article>
+
+
+
+
+
+<nav class="page-navigation" aria-label="Навигация по руководствам">
+  
+  <a class="page-navigation-link page-navigation-previous" href="/ru/docs/08-services-and-security.html">
+    <span>Предыдущая страница</span>
+    <strong>Службы и безопасность</strong>
+  </a>
+  
+  
+  <a class="page-navigation-link page-navigation-next" href="/ru/docs/10-temperatures-stability.html">
+    <span>Следующая страница</span>
+    <strong>Температуры и стабильность</strong>
+  </a>
+  
+</nav>
+
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Найди узкое место. Измени одну настройку. Измерь результат.</p>
+      <p>Универсальная оптимизация игрового ПК — 2026 · MIT License</p>
+      <div class="footer-links">
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide">GitHub</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/issues">Сообщить об ошибке</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/discussions">Обсуждения</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const content = document.querySelector('.doc-content');
+      const toc = document.querySelector('#table-of-contents');
+      
+      // Check if TOC is disabled for this page using data attribute or class
+      const docElement = document.querySelector('.doc');
+      const tocDisabled = docElement && docElement.classList.contains('toc-disabled');
+      
+      if (content && toc && !tocDisabled) {
+        content.querySelectorAll('h2, h3').forEach((heading, index) => {
+          if (!heading.id) {
+            heading.id = `section-${index + 1}`;
+          }
+          const item = document.createElement('li');
+          if (heading.tagName === 'H3') {
+            item.classList.add('toc-subitem');
+          }
+          const link = document.createElement('a');
+          link.href = `#${heading.id}`;
+          link.textContent = heading.textContent.trim();
+          item.appendChild(link);
+          toc.appendChild(item);
+        });
+        if (toc.children.length === 0) {
+          toc.closest('.doc-sidebar').hidden = true;
+        }
+      } else if (tocDisabled) {
+        // If TOC is disabled, hide the sidebar
+        const docSidebar = document.querySelector('.doc-sidebar');
+        if (docSidebar) {
+          docSidebar.hidden = true;
+        }
+      }
+
+      const labels = {
+        copy: 'Копировать',
+        copied: 'Скопировано',
+        failed: 'Не удалось скопировать'
+      };
+
+      document.querySelectorAll('main pre > code').forEach((code) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'copy-button';
+        button.textContent = labels.copy;
+        button.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(code.innerText);
+            button.textContent = labels.copied;
+          } catch {
+            button.textContent = labels.failed;
+          }
+          window.setTimeout(() => {
+            button.textContent = labels.copy;
+          }, 2000);
+        });
+        code.parentElement.appendChild(button);
+      });
+    })();
+  </script>
+</body>
+
+</html>

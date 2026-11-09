@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "sass": "file:sass-1.108.0.tgz"
+  },
+  "allowScripts": {
+    "@parcel/watcher": true
+  }
+}

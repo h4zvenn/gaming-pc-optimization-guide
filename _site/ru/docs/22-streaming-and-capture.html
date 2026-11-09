@@ -1,0 +1,663 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="dark">
+  <title>Стриминг и запись игры — Универсальная оптимизация игрового ПК — 2026</title>
+  <meta name="description" content="Снизь влияние записи и стрима на производительность, измеряя нагрузку энкодера, захвата и оверлеев.">
+  <link rel="canonical" href="http://localhost:4000/ru/docs/22-streaming-and-capture.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Универсальная оптимизация игрового ПК — 2026">
+  <meta property="og:title" content="Стриминг и запись игры">
+  <meta property="og:description" content="Снизь влияние записи и стрима на производительность, измеряя нагрузку энкодера, захвата и оверлеев.">
+  <meta property="og:url" content="http://localhost:4000/ru/docs/22-streaming-and-capture.html">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Стриминг и запись игры">
+  <meta name="twitter:description" content="Снизь влияние записи и стрима на производительность, измеряя нагрузку энкодера, захвата и оверлеев.">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Универсальная оптимизация игрового ПК — 2026",
+      "url": "http://localhost:4000/ru/"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "http://localhost:4000/ru/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Windows",
+          "item": "http://localhost:4000/ru/docs/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Стриминг и запись игры",
+          "item": "http://localhost:4000/ru/docs/22-streaming-and-capture.html"
+        }
+        
+        
+      ]
+    }
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Стриминг и запись игры",
+      "description": "Снизь влияние записи и стрима на производительность, измеряя нагрузку энкодера, захвата и оверлеев.",
+      "inLanguage": "ru",
+      "mainEntityOfPage": "http://localhost:4000/ru/docs/22-streaming-and-capture.html"
+    }
+  </script>
+  
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="/" class="site-title">PC Optimizer</a>
+
+    <!-- Navigation -->
+    <nav class="site-nav desktop-nav">
+      
+        <a href="/" class="">
+          Home
+        </a>
+      
+        <a href="/docs/" class="">
+          Guides
+        </a>
+      
+        <a href="/downloads/" class="">
+          Downloads
+        </a>
+      
+        <a href="/docs/games/" class="">
+          Games
+        </a>
+      
+        <a href="/docs/hardware/" class="">
+          Hardware
+        </a>
+      
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions-group">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <div class="language-switcher">
+        
+          
+            <a href="/" class="lang-link">English</a>
+          
+        
+          
+            <span class="current-lang">Русский</span>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main id="main-content" class="site-main" tabindex="-1">
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" aria-label="Навигационная цепочка">
+  <ol>
+    <li><a href="/ru/">Главная</a></li>
+    
+    <li><a href="/ru/docs/">Windows</a></li>
+    
+    <li aria-current="page">Стриминг и запись игры</li>
+  </ol>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="original-link"><a href="/docs/22-streaming-and-capture.html" hreflang="en" lang="en">Read the English original</a></p>
+
+
+<article class="doc">
+  <aside class="doc-nav">
+    <nav aria-label="Разделы">
+      <h3><a href="/ru/docs/">Руководства Windows</a></h3>
+      <ul>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/01-before-you-start.html">Подготовка перед оптимизацией</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/02-find-the-bottleneck.html">Поиск узкого места</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/03-bios-and-hardware.html">BIOS и оборудование</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/04-drivers-and-updates.html">Драйверы и обновления</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/05-windows-11.html">Настройки Windows 11</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/06-gpu-settings.html">Настройки видеокарты</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/07-background-apps.html">Фоновые приложения и автозагрузка</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/08-services-and-security.html">Службы и безопасность</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/09-powershell-diagnostics.html">Диагностика через PowerShell</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/10-temperatures-stability.html">Температуры и стабильность</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/11-what-not-to-do.html">Чего не следует делать</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/12-faq.html">Частые вопросы</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/13-security-hardening-baseline.html">Базовая настройка безопасности</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/14-quick-start-presets.html">Стартовые наборы настроек</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/15-troubleshooting-decision-trees.html">Деревья поиска неисправностей</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/16-benchmark-templates.html">Шаблоны бенчмарков</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/17-common-builds-quick-cards.html">Типовые сборки</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/18-optimization-tools-evidence.html">Инструменты оптимизации</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/19-ai-software-and-disk-cleanup.html">Очистка диска и удаление ПО</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/20-network-and-wifi.html">Сеть, Wi-Fi и онлайн-задержка</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/21-laptops-and-handhelds.html">Ноутбуки и портативные ПК на Windows</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/22-streaming-and-capture.html" aria-current="page">Стриминг и запись игры</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/23-overclocking-and-undervolting.html">Разгон и андервольтинг</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/24-safe-optimization-playbook.html">Практические безопасные процедуры оптимизации</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/start-here.html">С чего начать</a></li>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/ultimate-pc-gaming-guide-2026.html">Универсальная оптимизация игрового ПК — 2026</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/windows-10-legacy.html">Windows 10: заметки для legacy-игровых ПК</a></li>
+        
+        
+        
+      </ul>
+      <h3><a href="/ru/docs/games/">Руководства по играм</a></h3>
+      <ul>
+        <li><a href="/ru/docs/games/">Все игры</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/ru/docs/games/cs2.html">Counter-Strike 2</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/minecraft-java.html">Minecraft Java</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/pubg.html">PUBG: BATTLEGROUNDS</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/valorant.html">VALORANT</a></li>
+        
+        
+        
+        <li><a href="/ru/docs/games/world-of-tanks.html">World of Tanks</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </nav>
+  </aside>
+  <div class="doc-content">
+    <h1>Стриминг и запись игры</h1>
+    
+
+<p>Запись и стриминг нагружают GPU, CPU, память и диск. Измеряй эту нагрузку сам, а не копируй чужие настройки энкодера.</p>
+
+<h2 id="измерь-стоимость">Измерь стоимость</h2>
+
+<ol>
+  <li>Проведи бенчмарк игры без записи по методу из <a href="16-benchmark-templates.html">шаблонов бенчмарка</a>.</li>
+  <li>Повтори тот же тест с запущенной программой записи или стрима.</li>
+  <li>Сравни средний FPS, 1% минимумов и время кадров. Разница и есть реальная цена на твоей системе.</li>
+</ol>
+
+<h2 id="выбор-энкодера">Выбор энкодера</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Энкодер</th>
+      <th>Что использует</th>
+      <th>Когда рассматривать</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Аппаратный (NVENC, AMD AMF, Intel Quick Sync)</td>
+      <td>Выделенный блок кодирования на GPU или iGPU</td>
+      <td>Нужна низкая нагрузка на CPU во время игры.</td>
+    </tr>
+    <tr>
+      <td>Программный (x264)</td>
+      <td>Ядра CPU</td>
+      <td>Есть запас CPU и ты хочешь проверить качество при заданном битрейте.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Аппаратные энкодеры обычно являются отправной точкой для игр. Их качество и влияние зависят от поколения GPU и версии ПО, поэтому проверь их на своём оборудовании.</p>
+
+<h2 id="практические-настройки">Практические настройки</h2>
+
+<ul>
+  <li>Записывай или стримь в том разрешении и с той частотой кадров, которые тебе действительно нужны. Более высокие значения стоят дороже.</li>
+  <li>Держи битрейт в пределах скорости отдачи с запасом и проверь тестовой записью или закрытым стримом.</li>
+  <li>Записывай на быстрый диск, не занятый обращениями самой игры. Следи за свободным местом: записи большие.</li>
+  <li>Используй захват игры, а не всего экрана, если ПО это поддерживает, и избегай лишних источников — браузера и фильтров.</li>
+  <li>Если игра упирается в GPU, небольшое снижение настроек игры или лимит FPS обычно оставляет энкодеру больше запаса, чем смена пресета энкодера.</li>
+</ul>
+
+<h2 id="оверлеи">Оверлеи</h2>
+
+<p>Каждый оверлей (программа записи, лаунчер, монитор производительности, чат) может добавлять нагрузку или конфликтовать с античитом. Включай только нужные и отключай их при диагностике. Для соревновательных игр проверь официальные рекомендации игры и вендора античита об оверлеях и программах захвата.</p>
+
+<h2 id="пропущенные-кадры">Пропущенные кадры</h2>
+
+<ul>
+  <li><strong>Encoding overloaded</strong> в программе: энкодер не справляется. Снизь выходное разрешение, частоту кадров или нагрузку пресета, либо перейди на другой энкодер.</li>
+  <li><strong>Rendering lag</strong>: GPU перегружена игрой. Ограничь FPS игры или снизь её настройки.</li>
+  <li><strong>Сетевые потери</strong> при стриме: см. <a href="20-network-and-wifi.html">Сеть, Wi-Fi и онлайн-задержка</a>.</li>
+</ul>
+
+<h2 id="чего-избегать">Чего избегать</h2>
+
+<ul>
+  <li>«Лучших настроек OBS», скопированных без теста на похожем оборудовании.</li>
+  <li>Одновременной работы нескольких программ захвата или оверлеев.</li>
+  <li>Отключения защиты ради производительности захвата.</li>
+</ul>
+
+    <a class="back-to-top" href="#main-content">Наверх</a>
+  </div>
+
+  
+  <aside class="doc-sidebar">
+    <details class="doc-toc" open>
+      <summary>На этой странице</summary>
+      <nav aria-label="На этой странице">
+        <ol id="table-of-contents"></ol>
+      </nav>
+    </details>
+  </aside>
+  
+</article>
+
+
+
+
+
+<nav class="page-navigation" aria-label="Навигация по руководствам">
+  
+  <a class="page-navigation-link page-navigation-previous" href="/ru/docs/21-laptops-and-handhelds.html">
+    <span>Предыдущая страница</span>
+    <strong>Ноутбуки и портативные ПК на Windows</strong>
+  </a>
+  
+  
+  <a class="page-navigation-link page-navigation-next" href="/ru/docs/23-overclocking-and-undervolting.html">
+    <span>Следующая страница</span>
+    <strong>Разгон и андервольтинг</strong>
+  </a>
+  
+</nav>
+
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Найди узкое место. Измени одну настройку. Измерь результат.</p>
+      <p>Универсальная оптимизация игрового ПК — 2026 · MIT License</p>
+      <div class="footer-links">
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide">GitHub</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/issues">Сообщить об ошибке</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/discussions">Обсуждения</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const content = document.querySelector('.doc-content');
+      const toc = document.querySelector('#table-of-contents');
+      
+      // Check if TOC is disabled for this page using data attribute or class
+      const docElement = document.querySelector('.doc');
+      const tocDisabled = docElement && docElement.classList.contains('toc-disabled');
+      
+      if (content && toc && !tocDisabled) {
+        content.querySelectorAll('h2, h3').forEach((heading, index) => {
+          if (!heading.id) {
+            heading.id = `section-${index + 1}`;
+          }
+          const item = document.createElement('li');
+          if (heading.tagName === 'H3') {
+            item.classList.add('toc-subitem');
+          }
+          const link = document.createElement('a');
+          link.href = `#${heading.id}`;
+          link.textContent = heading.textContent.trim();
+          item.appendChild(link);
+          toc.appendChild(item);
+        });
+        if (toc.children.length === 0) {
+          toc.closest('.doc-sidebar').hidden = true;
+        }
+      } else if (tocDisabled) {
+        // If TOC is disabled, hide the sidebar
+        const docSidebar = document.querySelector('.doc-sidebar');
+        if (docSidebar) {
+          docSidebar.hidden = true;
+        }
+      }
+
+      const labels = {
+        copy: 'Копировать',
+        copied: 'Скопировано',
+        failed: 'Не удалось скопировать'
+      };
+
+      document.querySelectorAll('main pre > code').forEach((code) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'copy-button';
+        button.textContent = labels.copy;
+        button.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(code.innerText);
+            button.textContent = labels.copied;
+          } catch {
+            button.textContent = labels.failed;
+          }
+          window.setTimeout(() => {
+            button.textContent = labels.copy;
+          }, 2000);
+        });
+        code.parentElement.appendChild(button);
+      });
+    })();
+  </script>
+</body>
+
+</html>

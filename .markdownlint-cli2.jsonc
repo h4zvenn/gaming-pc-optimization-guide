@@ -1,0 +1,41 @@
+// .markdownlint-cli2.jsonc
+{
+  "config": {
+    "default": true,
+
+    // Heading style (#) and list markers (-).
+    "MD003": { "style": "atx" },
+    "MD004": { "style": "dash" },
+
+    // No line length limit.
+    "MD013": false,
+
+    // Duplicate headings are fine in different sections.
+    "MD024": { "siblings_only": true },
+
+    // One H1 per file; front matter title is not counted.
+    "MD025": { "front_matter_title": "" },
+
+    // Inline HTML is allowed only for these tags (README, Jekyll).
+    "MD033": {
+      "allowed_elements": ["a", "b", "br", "details", "div", "h1", "h2", "h3", "h4", "h5", "h6", "img", "li", "ol", "p", "section", "span", "strong", "ul", "summary"]
+    },
+
+    // First line does not have to be a heading (front matter).
+    "MD041": false,
+
+    // Liquid filters break table checks.
+    "MD056": false,
+    "MD060": false
+  },
+
+  "globs": ["**/*.md"],
+
+  "ignores": [
+    "**/node_modules/**",
+    "_site/**",
+    ".jekyll-cache/**",
+    "vendor/**",
+    "**/.aider*"
+  ]
+}

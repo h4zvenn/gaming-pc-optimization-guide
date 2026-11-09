@@ -1,0 +1,240 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="dark">
+  <title>Page Not Found — Ultimate PC Gaming Optimization Guide 2026</title>
+  <meta name="description" content="The page you are looking for does not exist.">
+  <link rel="canonical" href="http://localhost:4000/404.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ultimate PC Gaming Optimization Guide 2026">
+  <meta property="og:title" content="Page Not Found">
+  <meta property="og:description" content="The page you are looking for does not exist.">
+  <meta property="og:url" content="http://localhost:4000/404.html">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Page Not Found">
+  <meta name="twitter:description" content="The page you are looking for does not exist.">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ultimate PC Gaming Optimization Guide 2026",
+      "url": "http://localhost:4000/"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "http://localhost:4000/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Windows",
+          "item": "http://localhost:4000/docs/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Page Not Found",
+          "item": "http://localhost:4000/404.html"
+        }
+        
+        
+      ]
+    }
+  </script>
+  
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="/" class="site-title">PC Optimizer</a>
+
+    <!-- Navigation -->
+    <nav class="site-nav desktop-nav">
+      
+        <a href="/" class="">
+          Home
+        </a>
+      
+        <a href="/docs/" class="">
+          Guides
+        </a>
+      
+        <a href="/downloads/" class="">
+          Downloads
+        </a>
+      
+        <a href="/docs/games/" class="">
+          Games
+        </a>
+      
+        <a href="/docs/hardware/" class="">
+          Hardware
+        </a>
+      
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions-group">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <div class="language-switcher">
+        
+          
+            <span class="current-lang">English</span>
+          
+        
+          
+            <a href="/ru/" class="lang-link">Русский</a>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main id="main-content" class="site-main" tabindex="-1">
+    <div class="container">
+      <h1 id="page-not-found">Page not found</h1>
+
+<p>The page you are looking for does not exist or has moved.</p>
+
+<div class="hero-actions">
+  <a class="button button-primary" href="/">
+    Back to home
+  </a>
+  <a class="button button-secondary" href="/docs/games/">
+    Browse game guides
+  </a>
+</div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Find the bottleneck. Change one setting. Measure the result.</p>
+      <p>Ultimate PC Gaming Optimization Guide 2026 · MIT License</p>
+      <div class="footer-links">
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide">GitHub</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/issues">Report an issue</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/discussions">Discussions</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const content = document.querySelector('.doc-content');
+      const toc = document.querySelector('#table-of-contents');
+      
+      // Check if TOC is disabled for this page using data attribute or class
+      const docElement = document.querySelector('.doc');
+      const tocDisabled = docElement && docElement.classList.contains('toc-disabled');
+      
+      if (content && toc && !tocDisabled) {
+        content.querySelectorAll('h2, h3').forEach((heading, index) => {
+          if (!heading.id) {
+            heading.id = `section-${index + 1}`;
+          }
+          const item = document.createElement('li');
+          if (heading.tagName === 'H3') {
+            item.classList.add('toc-subitem');
+          }
+          const link = document.createElement('a');
+          link.href = `#${heading.id}`;
+          link.textContent = heading.textContent.trim();
+          item.appendChild(link);
+          toc.appendChild(item);
+        });
+        if (toc.children.length === 0) {
+          toc.closest('.doc-sidebar').hidden = true;
+        }
+      } else if (tocDisabled) {
+        // If TOC is disabled, hide the sidebar
+        const docSidebar = document.querySelector('.doc-sidebar');
+        if (docSidebar) {
+          docSidebar.hidden = true;
+        }
+      }
+
+      const labels = {
+        copy: 'Copy',
+        copied: 'Copied',
+        failed: 'Copy failed'
+      };
+
+      document.querySelectorAll('main pre > code').forEach((code) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'copy-button';
+        button.textContent = labels.copy;
+        button.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(code.innerText);
+            button.textContent = labels.copied;
+          } catch {
+            button.textContent = labels.failed;
+          }
+          window.setTimeout(() => {
+            button.textContent = labels.copy;
+          }, 2000);
+        });
+        code.parentElement.appendChild(button);
+      });
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+title: Ultimate PC Gaming Optimization Guide 2026
+description: A hardware-agnostic, evidence-based guide to diagnosing and improving gaming PC performance safely.
+# Base URL for GitHub Pages. For local development use `--baseurl ""` or set this variable to an empty string.
+baseurl: ""
+url: "https://h4zvenn.github.io"
+markdown: kramdown
+sass:
+  style: compressed
+# Ensure Sass looks in the _sass directory (default behaviour, but explicit for clarity).
+  load_paths:
+    - _sass
+# Include assets folder explicitly (not required by default, but harmless and clear).
+include:
+  - assets
+lang: en
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: en
+  - scope:
+      path: "docs"
+    values:
+      layout: doc
+  - scope:
+      path: "ru"
+    values:
+      lang: ru
+  - scope:
+      path: "ru/docs"
+    values:
+      layout: doc
+exclude:
+  - .git
+  - .github
+  - .markdownlint-cli2.jsonc
+  - README.md
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - SECURITY.md
+  - AUDIT.md
+  - CHANGELOG-PROPOSED.md

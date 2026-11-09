@@ -1,0 +1,124 @@
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .doc {
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    padding: 0 12px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .doc {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "nav";
+  }
+
+  .doc-nav {
+    position: relative;
+    top: auto;
+    max-height: none;
+    margin-bottom: 24px;
+  }
+
+  .doc-sidebar {
+    position: relative;
+    top: auto;
+    max-height: none;
+    margin-top: 24px;
+  }
+
+  .doc-content {
+    padding: 20px;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    min-width: 320px;
+  }
+
+  .doc {
+    gap: 16px;
+    padding: 0 8px;
+  }
+
+  .doc-nav {
+    padding: 14px;
+  }
+
+  .doc-content {
+    padding: 16px 12px;
+  }
+
+  .site-nav a {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+
+  .home-method li {
+    padding: 10px 12px 10px 42px;
+  }
+
+  .tile {
+    padding: 12px 14px;
+  }
+
+  .link-list li {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .doc-content h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+
+  .doc-content h3 {
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .doc-content {
+    padding: 14px 10px;
+  }
+
+  .home-hero {
+    padding: 20px 16px;
+  }
+
+  .home-hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* --- Adaptive styles for cards and steps ---------------------------------- */
+@media (max-width: 1200px) {
+  .card, .step { padding: 18px; font-size: 0.95rem; }
+}
+@media (max-width: 1024px) {
+  .card, .step { padding: 16px; font-size: 0.93rem; }
+  .card::before, .step::before { width: 42px; height: 42px; }
+}
+@media (max-width: 768px) {
+  .card, .step { padding: 14px; font-size: 0.9rem; }
+  .card::before, .step::before { width: 36px; height: 36px; }
+}
+@media (max-width: 480px) {
+  .card, .step { padding: 12px; font-size: 0.85rem; }
+  .card::before, .step::before { width: 30px; height: 30px; }
+}

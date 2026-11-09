@@ -1,0 +1,746 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="dark">
+  <title>Intel GPU Settings — Ultimate PC Gaming Optimization Guide 2026</title>
+  <meta name="description" content="Review Intel Arc drivers, XeSS, Resizable BAR, and per-game graphics settings.">
+  <link rel="canonical" href="http://localhost:4000/docs/hardware/intel-gpu.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ultimate PC Gaming Optimization Guide 2026">
+  <meta property="og:title" content="Intel GPU Settings">
+  <meta property="og:description" content="Review Intel Arc drivers, XeSS, Resizable BAR, and per-game graphics settings.">
+  <meta property="og:url" content="http://localhost:4000/docs/hardware/intel-gpu.html">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Intel GPU Settings">
+  <meta name="twitter:description" content="Review Intel Arc drivers, XeSS, Resizable BAR, and per-game graphics settings.">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ultimate PC Gaming Optimization Guide 2026",
+      "url": "http://localhost:4000/"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "http://localhost:4000/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Windows",
+          "item": "http://localhost:4000/docs/"
+        }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Intel GPU Settings",
+          "item": "http://localhost:4000/docs/hardware/intel-gpu.html"
+        }
+        
+        
+      ]
+    }
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Intel GPU Settings",
+      "description": "Review Intel Arc drivers, XeSS, Resizable BAR, and per-game graphics settings.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "http://localhost:4000/docs/hardware/intel-gpu.html"
+    }
+  </script>
+  
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="/" class="site-title">PC Optimizer</a>
+
+    <!-- Navigation -->
+    <nav class="site-nav desktop-nav">
+      
+        <a href="/" class="">
+          Home
+        </a>
+      
+        <a href="/docs/" class="">
+          Guides
+        </a>
+      
+        <a href="/downloads/" class="">
+          Downloads
+        </a>
+      
+        <a href="/docs/games/" class="">
+          Games
+        </a>
+      
+        <a href="/docs/hardware/" class="">
+          Hardware
+        </a>
+      
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions-group">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <div class="language-switcher">
+        
+          
+            <span class="current-lang">English</span>
+          
+        
+          
+            <a href="/ru/" class="lang-link">Русский</a>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main id="main-content" class="site-main" tabindex="-1">
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/docs/">Windows</a></li>
+    
+    <li aria-current="page">Intel GPU Settings</li>
+  </ol>
+</nav>
+
+
+
+
+
+
+
+
+
+<article class="doc">
+  <aside class="doc-nav">
+    <nav aria-label="Guides">
+      <h3><a href="/docs/">Windows guides</a></h3>
+      <ul>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/docs/01-before-you-start.html">Before You Start</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/02-find-the-bottleneck.html">Find the Bottleneck</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/03-bios-and-hardware.html">BIOS &amp; Hardware</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/04-drivers-and-updates.html">Drivers &amp; Updates</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/05-windows-11.html">Windows 11 Gaming Settings</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/06-gpu-settings.html">GPU Settings</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/07-background-apps.html">Background Apps</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/08-services-and-security.html">Services &amp; Security</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/09-powershell-diagnostics.html">PowerShell Diagnostics</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/10-temperatures-stability.html">Temperatures &amp; Stability</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/11-what-not-to-do.html">What Not To Do</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/12-faq.html">FAQ</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/13-security-hardening-baseline.html">Security Hardening</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/14-quick-start-presets.html">Quick-Start Presets</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/15-troubleshooting-decision-trees.html">Troubleshooting Trees</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/16-benchmark-templates.html">Benchmark Templates</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/17-common-builds-quick-cards.html">Common Builds</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/18-optimization-tools-evidence.html">Optimization Tools</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/19-ai-software-and-disk-cleanup.html">Disk Cleanup</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/20-network-and-wifi.html">Network, Wi-Fi, and Online Latency</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/21-laptops-and-handhelds.html">Laptops and Windows Handhelds</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/22-streaming-and-capture.html">Streaming and Game Capture</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/23-overclocking-and-undervolting.html">Overclocking and Undervolting</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/24-safe-optimization-playbook.html">Safe Optimization Playbook</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/docs/glossary.html">Glossary</a></li>
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/docs/hardware/amd-cpu.html">AMD CPU Settings</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/hardware/amd.html">AMD GPU Settings</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/hardware/intel-cpu.html">Intel CPU Settings</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/hardware/intel-gpu.html" aria-current="page">Intel GPU Settings</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/hardware/nvidia.html">NVIDIA GPU Settings</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/methodology.html">Testing Methodology</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/sources.html">Sources and Evidence</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/start-here.html">Start Here</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/tools.html">System Utilities</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/ultimate-pc-gaming-guide-2026.html">Ultimate PC Gaming Optimization Guide 2026</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/windows-10-legacy.html">Windows 10 Legacy Gaming PC Notes</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+      <h3><a href="/docs/games/">Game guides</a></h3>
+      <ul>
+        <li><a href="/docs/games/">All games</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/docs/games/cs2.html">Counter-Strike 2</a></li>
+        
+        
+        
+        <li><a href="/docs/games/minecraft-java.html">Minecraft Java</a></li>
+        
+        
+        
+        <li><a href="/docs/games/pubg.html">PUBG: BATTLEGROUNDS</a></li>
+        
+        
+        
+        
+        
+        <li><a href="/docs/games/valorant.html">VALORANT</a></li>
+        
+        
+        
+        <li><a href="/docs/games/world-of-tanks.html">World of Tanks</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </nav>
+  </aside>
+  <div class="doc-content">
+    <h1>Intel GPU Settings</h1>
+    
+
+<p>Configure Intel Arc or integrated graphics with the current Intel graphics software and the game’s own settings. Driver and feature support varies by GPU generation.</p>
+
+<h2 id="before-you-start">Before you start</h2>
+
+<ul>
+  <li>Record the exact GPU model, driver version, game settings, and baseline test.</li>
+  <li>Download drivers from <a href="https://www.intel.com/content/www/us/en/support/detect.html">Intel Driver &amp; Support Assistant</a> or the support page for your exact GPU.</li>
+  <li>Make a restore point before a driver reinstall or BIOS change.</li>
+  <li>Do not assume a feature is supported by every Intel GPU.</li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+
+<ol>
+  <li><strong>Check for a stable driver</strong> for your exact GPU and Windows version. Use the current Intel graphics application available for your device; older devices may expose settings through Intel Arc Control.</li>
+  <li><strong>Create or review a per-game profile</strong> if the installed graphics application provides one. Keep global settings at defaults while troubleshooting.</li>
+  <li><strong>Enable XeSS inside a supported game</strong> and compare Quality, Balanced, and Performance modes. Check image quality and frame times as well as FPS.</li>
+  <li><strong>Check Resizable BAR support</strong> in the GPU application or system information. If the CPU, GPU, motherboard, and firmware support it, follow the motherboard vendor’s instructions to enable Above 4G Decoding and Resizable BAR. Do not change UEFI/CSM or Secure Boot settings without a verified rollback plan.</li>
+  <li><strong>Test one graphics option at a time.</strong> If the game has rendering API choices, compare them only to investigate a specific compatibility or performance issue.</li>
+</ol>
+
+<h2 id="verify-the-result">Verify the result</h2>
+
+<ul>
+  <li>Repeat the same scene at least three times with the same driver and game build.</li>
+  <li>Compare average FPS, 1% lows, frame times, and visible image artifacts.</li>
+  <li>Check for driver resets, crashes, and temperature or clock changes.</li>
+  <li>Confirm that the intended XeSS and Resizable BAR settings are active.</li>
+</ul>
+
+<h2 id="rollback">Rollback</h2>
+
+<ol>
+  <li>Restore the previous per-game setting or choose the default profile.</li>
+  <li>Disable XeSS or the changed driver feature if the result regresses.</li>
+  <li>If a driver update introduced instability, roll back through Device Manager when available or install the last stable Intel driver for the exact GPU.</li>
+  <li>Restore previous BIOS settings if a Resizable BAR change causes boot or compatibility problems.</li>
+</ol>
+
+<h2 id="related-guides">Related guides</h2>
+
+<ul>
+  <li><a href="../06-gpu-settings.html">GPU Settings</a></li>
+  <li><a href="../04-drivers-and-updates.html">Drivers and Updates</a></li>
+  <li><a href="../03-bios-and-hardware.html">BIOS and Hardware</a></li>
+</ul>
+
+<p>Official references: <a href="https://www.intel.com/content/www/us/en/support.html">Intel Support</a> and <a href="https://www.intel.com/content/www/us/en/support/detect.html">Intel Driver &amp; Support Assistant</a>. Use Intel’s support search for feature-specific documentation for your exact GPU generation.</p>
+
+    <a class="back-to-top" href="#main-content">Back to top</a>
+  </div>
+
+  
+  <aside class="doc-sidebar">
+    <details class="doc-toc" open>
+      <summary>On this page</summary>
+      <nav aria-label="On this page">
+        <ol id="table-of-contents"></ol>
+      </nav>
+    </details>
+  </aside>
+  
+</article>
+
+
+
+
+
+<nav class="page-navigation" aria-label="Guide navigation">
+  
+  <a class="page-navigation-link page-navigation-previous" href="/docs/hardware/intel-cpu.html">
+    <span>Previous page</span>
+    <strong>Intel CPU Settings</strong>
+  </a>
+  
+  
+  <a class="page-navigation-link page-navigation-next" href="/docs/hardware/nvidia.html">
+    <span>Next page</span>
+    <strong>NVIDIA GPU Settings</strong>
+  </a>
+  
+</nav>
+
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Find the bottleneck. Change one setting. Measure the result.</p>
+      <p>Ultimate PC Gaming Optimization Guide 2026 · MIT License</p>
+      <div class="footer-links">
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide">GitHub</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/issues">Report an issue</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/discussions">Discussions</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const content = document.querySelector('.doc-content');
+      const toc = document.querySelector('#table-of-contents');
+      
+      // Check if TOC is disabled for this page using data attribute or class
+      const docElement = document.querySelector('.doc');
+      const tocDisabled = docElement && docElement.classList.contains('toc-disabled');
+      
+      if (content && toc && !tocDisabled) {
+        content.querySelectorAll('h2, h3').forEach((heading, index) => {
+          if (!heading.id) {
+            heading.id = `section-${index + 1}`;
+          }
+          const item = document.createElement('li');
+          if (heading.tagName === 'H3') {
+            item.classList.add('toc-subitem');
+          }
+          const link = document.createElement('a');
+          link.href = `#${heading.id}`;
+          link.textContent = heading.textContent.trim();
+          item.appendChild(link);
+          toc.appendChild(item);
+        });
+        if (toc.children.length === 0) {
+          toc.closest('.doc-sidebar').hidden = true;
+        }
+      } else if (tocDisabled) {
+        // If TOC is disabled, hide the sidebar
+        const docSidebar = document.querySelector('.doc-sidebar');
+        if (docSidebar) {
+          docSidebar.hidden = true;
+        }
+      }
+
+      const labels = {
+        copy: 'Copy',
+        copied: 'Copied',
+        failed: 'Copy failed'
+      };
+
+      document.querySelectorAll('main pre > code').forEach((code) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'copy-button';
+        button.textContent = labels.copy;
+        button.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(code.innerText);
+            button.textContent = labels.copied;
+          } catch {
+            button.textContent = labels.failed;
+          }
+          window.setTimeout(() => {
+            button.textContent = labels.copy;
+          }, 2000);
+        });
+        code.parentElement.appendChild(button);
+      });
+    })();
+  </script>
+</body>
+
+</html>
