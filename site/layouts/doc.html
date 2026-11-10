@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{% assign ru = false %}
+{% if page.lang == 'ru' %}{% assign ru = true %}{% endif %}
+{% assign prefix = '' %}
+{% if ru %}{% assign prefix = '/ru' %}{% endif %}
+<div class="doc">
+  <aside class="doc-nav">
+    <details class="guide-menu" open>
+      <summary>{% if ru %}Навигатор{% else %}Guide navigator{% endif %}</summary>
+      <nav aria-label="{% if ru %}Разделы руководства{% else %}Guide sections{% endif %}">
+        <div class="guide-search" hidden>
+          <label for="guide-filter">{% if ru %}Найти раздел{% else %}Find a guide{% endif %}</label>
+          <input id="guide-filter" type="search" autocomplete="off" placeholder="{% if ru %}Например: пинг{% else %}Try: drivers{% endif %}">
+          <p class="guide-empty" role="status" hidden>{% if ru %}Раздел не найден. Попробуй другое слово.{% else %}No guides found. Try another word.{% endif %}</p>
+        </div>
+        <a class="nav-index" href="{{ prefix | append: '/docs/' | relative_url }}"{% if page.translation_key == 'system-guides' %} aria-current="page"{% endif %}>{% if ru %}Все разделы{% else %}All guides{% endif %}</a>
+        {% include guide-nav.html %}
+        <a class="nav-index" href="{{ '/downloads/' | relative_url }}">{% if ru %}Файлы и инструменты · EN{% else %}Files & tools{% endif %}</a>
+      </nav>
+    </details>
+  </aside>
+  <article class="doc-content">
+    <div class="article-meta"><a href="{{ prefix | append: '/docs/' | relative_url }}">{% if ru %}База знаний{% else %}Knowledge base{% endif %}</a><span>PC / LAB</span></div>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="article-lead">{{ page.description | escape }}</p>{% endif %}
+{{ content }}
+    <a class="back-to-top" href="#main-content">{% if ru %}К началу ↑{% else %}Back to top ↑{% endif %}</a>
+  </article>
+</div>

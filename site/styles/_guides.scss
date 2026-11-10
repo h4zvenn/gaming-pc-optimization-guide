@@ -1,0 +1,42 @@
+.doc { display:grid; grid-template-columns:260px minmax(0,1fr); gap:clamp(32px,5vw,84px); align-items:start; }
+.doc-nav { position:sticky; top:100px; max-height:calc(100vh - 120px); overflow:auto; scrollbar-width:thin; scrollbar-color:var(--border) transparent; padding-right:18px; }
+.guide-menu>summary { padding:0 0 18px; font:12px ui-monospace,monospace; text-transform:uppercase; letter-spacing:.15em; color:var(--muted); cursor:pointer; }
+.nav-group { margin:5px 0; padding-top:3px; }
+.guide-search label { display:block; font-size:.75rem; color:var(--muted); margin-bottom:6px; }
+.guide-search input { width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:6px; background:var(--surface); color:var(--text); font:inherit; font-size:.82rem; }
+.guide-search input::placeholder { color:var(--muted); }
+.guide-empty { color:var(--muted); font-size:.8rem; }
+.doc-nav [hidden] { display:none!important; }
+.nav-group>summary { cursor:pointer; padding:8px 0; font-size:.75rem; font-weight:700; letter-spacing:.04em; color:var(--text); text-transform:uppercase; }
+.nav-icon { display:inline-block; width:1.5em; margin-right:6px; font-size:.9rem; line-height:1; letter-spacing:0; vertical-align:baseline; }
+.nav-index { display:block; padding:10px 0; font-size:.82rem; text-transform:lowercase; text-decoration:none; }
+.nav-language { font:10px ui-monospace,monospace; color:var(--muted); text-transform:uppercase; }
+.guide-catalog-group ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:8px 24px; }
+.guide-catalog-group li { margin:0; }
+.guide-catalog-group a { display:block; padding:7px 0; }
+.doc-nav ul { list-style:none; padding:0; margin:0; }
+.doc-nav li { margin:2px 0; }
+.doc-nav li a { display:block; padding:7px 10px; border-left:2px solid transparent; color:var(--muted); font-size:.82rem; line-height:1.5; text-transform:lowercase; text-decoration:none; transition:color .15s,background .15s; }
+.doc-nav li a:hover { color:var(--text); background:var(--surface); }
+.doc-nav a[aria-current="page"] { color:var(--accent); border-left-color:var(--accent); background:var(--accent-soft); }
+.doc-content { width:100%; max-width:80ch; min-width:0; padding-bottom:32px; }
+.article-meta { display:flex; justify-content:space-between; gap:20px; padding-bottom:20px; border-bottom:1px solid var(--border); font:11px ui-monospace,monospace; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }
+.article-meta a { text-decoration:none; }
+.doc-content h1 { margin:30px 0 20px; }
+.article-lead { font-size:1.15rem; color:var(--muted); line-height:1.65; }
+.doc-content h2 { margin:2.8em 0 1em; padding-top:22px; border-top:1px solid var(--border); }
+.doc-content h3 { margin-top:2em; font-size:1.25rem; }
+.doc-content li { margin:.55em 0; }
+.doc-content :is(ul,ol) { padding-left:1.5em; }
+.doc-content blockquote,.callout { margin:28px 0; padding:16px 24px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 8px 8px 0; }
+.doc-content blockquote p { margin:.4em 0; }
+table { display:block; max-width:100%; overflow-x:auto; border-collapse:collapse; margin:28px 0; font-size:.88rem; }
+th,td { padding:13px 16px; border:1px solid var(--border); text-align:left; vertical-align:top; }
+th { background:var(--surface-2); }
+tbody tr:nth-child(even) { background:#11182088; }
+code { font:.85em ui-monospace,"Cascadia Code",Consolas,monospace; background:var(--surface-2); border-radius:4px; padding:2px 5px; }
+pre { position:relative; padding:54px 22px 22px; max-width:100%; overflow:auto; background:var(--code-bg); border:1px solid var(--border); border-radius:10px; line-height:1.65; }
+pre code { padding:0; border:0; background:none; overflow-wrap:normal; }
+.copy-button { position:absolute; right:12px; top:12px; padding:7px 12px; color:var(--muted); background:var(--surface); border:1px solid var(--border); border-radius:5px; cursor:pointer; font:11px ui-monospace,monospace; }
+.copy-button:hover { color:var(--accent); border-color:var(--accent); }
+hr { border:0; border-top:1px solid var(--border); margin:32px 0; }

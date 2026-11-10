@@ -1,0 +1,28 @@
+{% assign nav_lang = page.lang | default: 'en' %}
+{% assign localized_pages = site[nav_lang] %}
+{% for group in site.data.guide_nav %}
+  {% assign active_group = false %}
+  {% for entry in group.items %}
+    {% if entry.key == page.translation_key %}{% assign active_group = true %}{% endif %}
+  {% endfor %}
+  {% if include.catalog %}
+  <section class="guide-catalog-group"><h2>{{ group[nav_lang] }}</h2>
+  {% else %}
+  <details class="nav-group"{% if group.id == 'start' or active_group %} open{% endif %}>
+    <summary><span class="nav-icon" aria-hidden="true">{{ group.icon }}</span>{{ group[nav_lang] }}</summary>
+  {% endif %}
+    <ul>
+    {% for entry in group.items %}
+      {% assign target = localized_pages | where: 'translation_key', entry.key | first %}
+      {% assign fallback = false %}
+      {% unless target %}
+        {% assign target = site.en | where: 'translation_key', entry.key | first %}
+        {% assign fallback = true %}
+      {% endunless %}
+      {% if target %}
+      <li data-search="{{ target.title | escape }}"><a href="{{ target.url | relative_url }}"{% if target.url == page.url %} aria-current="page"{% endif %}{% if fallback %} hreflang="en"{% endif %}>{{ entry[nav_lang] | escape }}{% if fallback %} <span class="nav-language">EN</span>{% endif %}</a></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% if include.catalog %}</section>{% else %}</details>{% endif %}
+{% endfor %}

@@ -1,0 +1,21 @@
+main:
+  - title: "Guides"
+    title_ru: "Руководства"
+    url: "/docs/"
+  - title: "Downloads"
+    title_ru: "Загрузки"
+    url: "/downloads/"
+  - title: "Games"
+    title_ru: "Игры"
+    url: "/docs/games/"
+  - title: "Hardware"
+    title_ru: "Оборудование"
+    url: "/docs/hardware/"
+languages:
+  - code: "en"
+    name: "English"
+    url: "/"
+    
+  - code: "ru"
+    name: "Русский"
+    url: "/ru/"

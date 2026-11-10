@@ -10,7 +10,7 @@ Use [GitHub Issues](https://github.com/h4zvenn/gaming-pc-optimization-guide/issu
 
 ## Contribution principles
 
-- English only: all content and documentation must be in English.
+- English is the source language; Russian translations live in `site/content/_ru/`.
 - Tone: balanced technical precision with gamer-friendly language.
 - Keep it focused: one clear change or topic per pull request.
 - Format: prefer short actionable steps, checklists, tables, and code blocks.
@@ -100,7 +100,7 @@ Images are optional. Add one only when it explains something that text cannot sh
 Place files in:
 
 ```text
-images/
+site/assets/img/
 ```
 
 Use lowercase kebab-case names:
@@ -166,7 +166,7 @@ Releases are published automatically when a valid version tag is pushed. This im
    git push origin v1.3.0
    ```
 
-The release workflow validates the version-tag format, requires one matching changelog heading, and uses only that section as the GitHub Release notes. It attaches only the contents of the `tools/` folder as `GamingPCGuide-Diagnostics-<tag>.zip` with a `.sha256` checksum. The release job uses the `release` GitHub Environment. To require human approval, add required reviewers to that environment in repository Settings before pushing version tags.
+The release workflow validates the version-tag format, requires one matching changelog heading, and uses only that section as the GitHub Release notes. It attaches only the contents of `site/downloads/tools/` as `GamingPCGuide-Diagnostics-<tag>.zip` with a `.sha256` checksum. The release job uses the `release` GitHub Environment. To require human approval, add required reviewers to that environment in repository Settings before pushing version tags.
 
 Before committing, remove generated output:
 

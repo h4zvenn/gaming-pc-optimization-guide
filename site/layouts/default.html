@@ -1,0 +1,167 @@
+{% assign current_lang = page.lang | default: 'en' %}
+{% assign home_url = '/' %}
+{% assign english_url = '/' %}
+{% assign russian_url = '/ru/' %}
+{% assign windows_url = '/docs/' %}
+{% assign games_url = '/docs/games/' %}
+
+{% assign site_name = site.title | default: 'Ultimate PC Gaming Optimization Guide 2026' %}
+{% assign skip_label = 'Skip to content' %}
+{% assign home_label = 'Home' %}
+{% assign games_label = 'Games' %}
+{% assign copy_label = 'Copy' %}
+{% assign copied_label = 'Copied' %}
+{% assign copy_failed_label = 'Copy failed' %}
+{% assign issues_label = 'Report an issue' %}
+{% assign discussions_label = 'Discussions' %}
+{% assign footer_text = 'Find the bottleneck. Change one setting. Measure the result.' %}
+{% assign breadcrumb_section = 'Guides' %}
+{% assign breadcrumb_section_url = '/docs/' %}
+
+{% if current_lang == 'ru' %}
+{% assign home_url = '/ru/' %}
+{% assign home_label = 'Главная' %}
+{% assign skip_label = 'К содержимому' %}
+{% assign site_name = 'Универсальная оптимизация игрового ПК — 2026' %}
+{% assign games_label = 'Игры' %}
+{% assign windows_url = '/ru/docs/' %}
+{% assign games_url = '/ru/docs/games/' %}
+{% assign copy_label = 'Копировать' %}
+{% assign copied_label = 'Скопировано' %}
+{% assign copy_failed_label = 'Не удалось скопировать' %}
+{% assign issues_label = 'Сообщить об ошибке' %}
+{% assign discussions_label = 'Обсуждения' %}
+{% assign footer_text = 'Найди узкое место. Измени одну настройку. Измерь результат.' %}
+{% assign breadcrumb_section = 'Руководства' %}
+{% assign breadcrumb_section_url = '/ru/docs/' %}
+{% endif %}
+
+{% if page.url contains '/games/' %}
+{% assign breadcrumb_section = games_label %}
+{% assign breadcrumb_section_url = games_url %}
+{% endif %}
+{% if page.url contains '/hardware/' %}
+{% assign breadcrumb_section = 'Hardware' %}
+{% assign breadcrumb_section_url = '/docs/hardware/' %}
+{% if current_lang == 'ru' %}{% assign breadcrumb_section = 'Оборудование' %}{% assign breadcrumb_section_url = '/ru/docs/hardware/' %}{% endif %}
+{% elsif page.url contains '/downloads/' %}
+{% assign breadcrumb_section = 'Downloads' %}
+{% assign breadcrumb_section_url = '/downloads/' %}
+{% endif %}
+
+{% if page.translation_key %}
+{% assign all_pages = site.pages | concat: site.en | concat: site.ru %}
+{% assign translations = all_pages | where: 'translation_key', page.translation_key %}
+{% for translated_page in translations %}
+{% if translated_page.lang == 'en' %}
+{% assign english_url = translated_page.url %}
+{% elsif translated_page.lang == 'ru' %}
+{% assign russian_url = translated_page.url %}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="{{ current_lang | escape }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>{% if page.title and page.title != site_name %}{{ page.title | escape }} — {% endif %}{{ site_name | escape }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{% if page.layout == 'doc' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site_name | escape }}">
+  <meta property="og:title" content="{{ page.title | default: site_name | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:locale" content="{% if current_lang == 'ru' %}ru_RU{% else %}en_US{% endif %}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title | default: site_name | escape }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ site_name | jsonify }},
+      "url": {{ home_url | absolute_url | jsonify }}
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ home_label | jsonify }},
+          "item": {{ home_url | absolute_url | jsonify }}
+        }
+        {% if page.url != home_url %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ breadcrumb_section | jsonify }},
+          "item": {{ breadcrumb_section_url | absolute_url | jsonify }}
+        }
+        {% if page.url != breadcrumb_section_url %},
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page.title | default: site_name | jsonify }},
+          "item": {{ page.url | absolute_url | jsonify }}
+        }
+        {% endif %}
+        {% endif %}
+      ]
+    }
+  </script>
+  {% if page.layout == 'doc' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "inLanguage": {{ current_lang | jsonify }},
+      "mainEntityOfPage": {{ page.url | absolute_url | jsonify }}
+    }
+  </script>
+  {% endif %}
+
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">{{ skip_label }}</a>
+
+  {% include header.html %}
+
+  <main id="main-content" class="site-main" tabindex="-1">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>{{ footer_text }}</p>
+      <p>{{ site_name | escape }} · MIT License</p>
+      <div class="footer-links">
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide">GitHub</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/issues">{{ issues_label }}</a>
+        <a href="https://github.com/h4zvenn/gaming-pc-optimization-guide/discussions">{{ discussions_label }}</a>
+      </div>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer
+    data-copy="{{ copy_label | escape }}"
+    data-copied="{{ copied_label | escape }}"
+    data-copy-failed="{{ copy_failed_label | escape }}"></script>
+</body>
+
+</html>

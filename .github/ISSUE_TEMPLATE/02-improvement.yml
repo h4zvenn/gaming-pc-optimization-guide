@@ -8,7 +8,7 @@ body:
     attributes:
       label: Page or file
       description: Where the improvement belongs. Leave empty for a new page.
-      placeholder: docs/03-bios-and-hardware.md
+      placeholder: site/content/_en/docs/bios-hardware.md
 
   - type: textarea
     id: what

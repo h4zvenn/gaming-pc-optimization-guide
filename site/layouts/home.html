@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{% assign t = site.data.home[page.lang] %}
+{% assign prefix = '' %}{% if page.lang == 'ru' %}{% assign prefix = '/ru' %}{% endif %}
+<section class="home-hero">
+  <div class="home-hero-text">
+    <p class="hero-eyebrow">{{ t.eyebrow }}</p>
+    <h1>{{ t.title }} <span>{{ t.accent }}</span></h1>
+    <p class="hero-subtitle">{{ t.intro }}</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ prefix | append: '/docs/start-here.html' | relative_url }}">{{ t.cta }} <span aria-hidden="true">→</span></a>
+      <a class="button button-secondary" href="{{ prefix | append: '/docs/' | relative_url }}">{{ t.secondary }}</a>
+    </div>
+  </div>
+  <div class="session-panel">
+    <div class="session-heading"><span aria-hidden="true">[01—03]</span><h2>{{ t.panel }}</h2></div>
+    <ol class="home-method">
+      {% for step in t.steps %}<li><a href="{{ prefix | append: step[2] | relative_url }}"><strong>{{ step[0] }} <span aria-hidden="true">↗</span></strong><span>{{ step[1] }}</span></a></li>{% endfor %}
+    </ol>
+    <p class="session-note">{{ t.panelNote }}</p>
+  </div>
+</section>
+<section class="home-section" aria-labelledby="problems-heading">
+  <div class="section-heading"><span class="section-number" aria-hidden="true">01 /</span><div><h2 id="problems-heading">{{ t.problemsTitle }}</h2><p>{{ t.problemsIntro }}</p></div></div>
+  <div class="tile-grid">
+    {% for problem in t.problems %}<a class="tile" href="{{ prefix | append: problem[3] | relative_url }}"><span class="tile-number" aria-hidden="true">{{ problem[0] }}</span><strong>{{ problem[1] }}</strong><span>{{ problem[2] }}</span></a>{% endfor %}
+  </div>
+</section>
+<section class="home-section games-section" aria-labelledby="games-heading">
+  <div class="section-heading"><span class="section-number" aria-hidden="true">02 /</span><div><h2 id="games-heading">{{ t.gamesTitle }}</h2><p>{{ t.gamesIntro }}</p></div></div>
+  <div class="game-grid">
+    {% assign games = site.data.guide_nav | where: 'id', 'games' | first %}
+    {% for game in games.items offset:1 %}
+      {% assign target = site[page.lang] | where: 'translation_key', game.key | first %}
+      <a class="game-link" href="{{ target.url | relative_url }}"><span class="game-number" aria-hidden="true">0{{ forloop.index }}</span><strong>{{ game[page.lang] }}</strong><span aria-hidden="true">↗</span></a>
+    {% endfor %}
+  </div>
+  <a class="section-link" href="{{ prefix | append: '/docs/games/' | relative_url }}">{{ t.gamesLink }} →</a>
+</section>
+<section class="home-section" aria-labelledby="tools-heading">
+  <div class="section-heading"><span class="section-number" aria-hidden="true">03 /</span><div><h2 id="tools-heading">{{ t.toolTitle }}</h2></div></div>
+  <div class="resource-grid">
+    {% for tool in t.tools %}
+      {% assign tool_url = tool[3] %}{% unless tool_url contains '/downloads/' %}{% assign tool_url = prefix | append: tool_url %}{% endunless %}
+      <a class="resource-card" href="{{ tool_url | relative_url }}"><h3>{{ tool[0] }}</h3><p>{{ tool[1] }}</p><span>{{ tool[2] }} →</span></a>
+    {% endfor %}
+  </div>
+  {% if t.downloadNote != '' %}<p class="home-note">{{ t.downloadNote }}</p>{% endif %}
+</section>
+<section class="home-principle"><h2>{{ t.noteTitle }}</h2><div><p>{{ t.note }}</p><a href="{{ prefix | append: '/docs/windows-10-legacy.html' | relative_url }}">{{ t.legacy }} →</a></div></section>

@@ -1,0 +1,273 @@
+[
+  {
+    "id": "start",
+    "en": "Start here",
+    "ru": "Начни здесь",
+    "items": [
+      {
+        "key": "start-here",
+        "en": "1. Choose a problem",
+        "ru": "1. Выбери проблему"
+      },
+      {
+        "key": "before-you-start",
+        "en": "2. Prepare your PC",
+        "ru": "2. Подготовь ПК"
+      },
+      {
+        "key": "find-the-bottleneck",
+        "en": "3. Find the cause",
+        "ru": "3. Найди причину"
+      },
+      {
+        "key": "benchmark-templates",
+        "en": "4. Compare results",
+        "ru": "4. Сравни результат"
+      }
+    ],
+    "icon": "🧭"
+  },
+  {
+    "id": "diagnosis",
+    "en": "Find a problem",
+    "ru": "Найти проблему",
+    "items": [
+      {
+        "key": "troubleshooting-decision-trees",
+        "en": "Crashes & freezes",
+        "ru": "Вылеты и зависания"
+      },
+      {
+        "key": "temperatures-stability",
+        "en": "Heat & stability",
+        "ru": "Нагрев и стабильность"
+      },
+      {
+        "key": "network-and-wifi",
+        "en": "Ping & Wi-Fi",
+        "ru": "Пинг и Wi-Fi"
+      },
+      {
+        "key": "powershell-diagnostics",
+        "en": "PC diagnostics",
+        "ru": "Диагностика ПК"
+      }
+    ],
+    "icon": "🔎"
+  },
+  {
+    "id": "settings",
+    "en": "Adjust settings",
+    "ru": "Настроить ПК",
+    "items": [
+      {
+        "key": "windows-11",
+        "en": "Windows 11",
+        "ru": "Windows 11"
+      },
+      {
+        "key": "drivers-and-updates",
+        "en": "Drivers",
+        "ru": "Драйверы"
+      },
+      {
+        "key": "gpu-settings",
+        "en": "Graphics & display",
+        "ru": "Графика и экран"
+      },
+      {
+        "key": "background-apps",
+        "en": "Background apps",
+        "ru": "Фоновые приложения"
+      },
+      {
+        "key": "ai-software-and-disk-cleanup",
+        "en": "Disk cleanup",
+        "ru": "Очистка диска"
+      },
+      {
+        "key": "services-and-security",
+        "en": "Windows services",
+        "ru": "Службы Windows"
+      },
+      {
+        "key": "security-hardening-baseline",
+        "en": "Windows security",
+        "ru": "Защита Windows"
+      },
+      {
+        "key": "bios-and-hardware",
+        "en": "BIOS & memory",
+        "ru": "BIOS и память"
+      },
+      {
+        "key": "laptops-and-handhelds",
+        "en": "Laptops",
+        "ru": "Ноутбуки"
+      },
+      {
+        "key": "streaming-and-capture",
+        "en": "Recording & streams",
+        "ru": "Запись и стримы"
+      }
+    ],
+    "icon": "⚙️"
+  },
+  {
+    "id": "games",
+    "en": "Set up a game",
+    "ru": "Настроить игру",
+    "items": [
+      {
+        "key": "game-guides",
+        "en": "Choose a game",
+        "ru": "Выбрать игру"
+      },
+      {
+        "key": "game-cs2",
+        "en": "CS2",
+        "ru": "CS2"
+      },
+      {
+        "key": "game-minecraft-java",
+        "en": "Minecraft Java",
+        "ru": "Minecraft Java"
+      },
+      {
+        "key": "game-pubg",
+        "en": "PUBG",
+        "ru": "PUBG"
+      },
+      {
+        "key": "game-valorant",
+        "en": "Valorant",
+        "ru": "Valorant"
+      },
+      {
+        "key": "game-world-of-tanks",
+        "en": "World of Tanks",
+        "ru": "World of Tanks"
+      }
+    ],
+    "icon": "🎮"
+  },
+  {
+    "id": "hardware",
+    "en": "Choose hardware",
+    "ru": "Моё оборудование",
+    "items": [
+      {
+        "key": "hardware-guides",
+        "en": "Choose CPU / GPU",
+        "ru": "Выбрать CPU / GPU"
+      },
+      {
+        "key": "hardware-amd-cpu",
+        "en": "AMD CPU",
+        "ru": "Процессор AMD"
+      },
+      {
+        "key": "hardware-intel-cpu",
+        "en": "Intel CPU",
+        "ru": "Процессор Intel"
+      },
+      {
+        "key": "hardware-amd",
+        "en": "AMD GPU",
+        "ru": "Видеокарта AMD"
+      },
+      {
+        "key": "hardware-intel-gpu",
+        "en": "Intel GPU",
+        "ru": "Видеокарта Intel"
+      },
+      {
+        "key": "hardware-nvidia",
+        "en": "NVIDIA GPU",
+        "ru": "Видеокарта NVIDIA"
+      }
+    ],
+    "icon": "🖥️"
+  },
+  {
+    "id": "advanced",
+    "en": "Optional tuning",
+    "ru": "Дополнительно",
+    "items": [
+      {
+        "key": "quick-start-presets",
+        "en": "Settings checklists",
+        "ru": "Чек-листы настроек"
+      },
+      {
+        "key": "safe-optimization-playbook",
+        "en": "Step-by-step tweaks",
+        "ru": "Изменения по шагам"
+      },
+      {
+        "key": "overclocking-and-undervolting",
+        "en": "Clocks & voltage",
+        "ru": "Частоты и напряжение"
+      },
+      {
+        "key": "windows-10-legacy",
+        "en": "Windows 10",
+        "ru": "Windows 10"
+      }
+    ],
+    "icon": "🛠️"
+  },
+  {
+    "id": "reference",
+    "en": "Reference",
+    "ru": "Справка",
+    "items": [
+      {
+        "key": "ultimate-pc-gaming-guide-2026",
+        "en": "How optimization works",
+        "ru": "Как работает оптимизация"
+      },
+      {
+        "key": "what-not-to-do",
+        "en": "Mistakes to avoid",
+        "ru": "Опасные советы"
+      },
+      {
+        "key": "faq",
+        "en": "Questions & answers",
+        "ru": "Вопросы и ответы"
+      },
+      {
+        "key": "glossary",
+        "en": "Terms",
+        "ru": "Термины"
+      },
+      {
+        "key": "methodology",
+        "en": "Testing method",
+        "ru": "Методика тестов"
+      },
+      {
+        "key": "sources",
+        "en": "Sources",
+        "ru": "Источники"
+      },
+      {
+        "key": "optimization-tools-evidence",
+        "en": "Tool claims",
+        "ru": "Обещания утилит"
+      },
+      {
+        "key": "system-tools",
+        "en": "Diagnostic tools",
+        "ru": "Утилиты диагностики"
+      },
+      {
+        "key": "common-builds-quick-cards",
+        "en": "Example PC builds",
+        "ru": "Примеры сборок"
+      }
+    ],
+    "icon": "📖"
+  }
+]

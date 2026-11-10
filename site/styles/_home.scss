@@ -1,0 +1,47 @@
+.home-hero { position:relative; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(300px,1fr); gap:64px; align-items:center; padding:44px 0 64px; }
+.hero-eyebrow { color:var(--accent); font:11px ui-monospace,monospace; letter-spacing:.1em; text-transform:uppercase; }
+.home-hero h1 { font-size:clamp(2.7rem,5.2vw,5.2rem); line-height:1.06; margin:28px 0; letter-spacing:-.055em; text-wrap:initial; }
+.home-hero h1>span { display:block; color:var(--accent); }
+.hero-subtitle { max-width:48ch; color:var(--muted); font-size:1.1rem; }
+.session-panel { border:1px solid var(--border); border-radius:12px; background:linear-gradient(145deg,#1a2925,#10171f 65%); padding:26px; position:relative; overflow:hidden; }
+.session-panel::before { content:""; position:absolute; top:0; left:0; height:2px; width:30%; background:linear-gradient(90deg,transparent,var(--accent),transparent); animation:scan 7s ease-in-out infinite; }
+.session-heading { display:flex; gap:16px; align-items:center; padding-bottom:20px; }
+.session-heading>span { font:12px ui-monospace,monospace; color:var(--accent); }
+.session-heading h2 { margin:0; font-size:1rem; }
+.home-method { list-style:none; counter-reset:method; padding:0; margin:0; }
+.home-method li { counter-increment:method; position:relative; border-top:1px solid var(--border); }
+.home-method li::before { content:"0" counter(method); position:absolute; top:23px; left:0; color:var(--muted); font:12px ui-monospace,monospace; pointer-events:none; }
+.home-method a { display:block; padding:18px 0 18px 36px; text-decoration:none; color:var(--text); }
+.home-method a:hover strong { color:var(--accent); }
+.home-method strong { display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:.95rem; }
+.home-method strong span { font-weight:400; color:var(--accent); }
+.home-method a>span { display:block; color:var(--muted); font-size:.85rem; margin-top:5px; }
+.session-note { font:11px/1.6 ui-monospace,monospace; color:var(--muted); border-top:1px solid var(--border); padding-top:18px; margin:0; }
+.home-section { padding:46px 0; border-top:1px solid var(--border); }
+.section-heading { display:flex; gap:18px; margin-bottom:28px; align-items:baseline; }
+.section-number { color:var(--accent); font:12px ui-monospace,monospace; white-space:nowrap; }
+.section-heading h2 { margin:0; font-size:clamp(1.5rem,2.5vw,2.1rem); }
+.section-heading p { margin:10px 0 0; color:var(--muted); font-size:.92rem; max-width:72ch; }
+.home-note { color:var(--muted); font-size:.85rem; max-width:100ch; margin:22px 0 0; }
+.section-link { display:inline-block; margin-top:22px; font-size:.88rem; }
+.game-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+.game-link { display:flex; flex-direction:column; gap:18px; padding:22px; text-decoration:none; color:var(--text); background:var(--surface); border-right:1px solid var(--border); transition:background .2s; }
+.game-link:last-child { border-right:0; }
+.game-link:hover { background:var(--accent-soft); }
+.game-link>span:last-child { align-self:flex-end; color:var(--accent); }
+.game-number { font:11px ui-monospace,monospace; color:var(--muted); }
+.game-link strong { font-size:1rem; }
+.resource-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.resource-card { display:flex; flex-direction:column; text-decoration:none; padding:24px; border:1px solid var(--border); border-radius:8px; background:var(--surface); color:var(--text); }
+.resource-card:hover { border-color:var(--accent); }
+.resource-card h3 { margin:0; font-size:1.1rem; }
+.resource-card p { color:var(--muted); font-size:.9rem; flex:1; }
+.resource-card>span { font-size:.85rem; color:var(--accent); }
+.home-principle { border-top:1px solid var(--border); padding-top:40px; display:grid; grid-template-columns:1fr 1.5fr; gap:40px; }
+.home-principle h2 { margin:0; max-width:20ch; font-size:1.5rem; }
+.home-principle p { margin-top:0; color:var(--muted); font-size:.9rem; }
+.home-principle a { font-size:.85rem; }
+@keyframes scan { 0%,100% { transform:translateX(-100%); } 50% { transform:translateX(330%); } }
+@keyframes arrive { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.home-hero-text,.session-panel { animation:arrive .6s ease-out both; }
+.session-panel { animation-delay:.1s; }

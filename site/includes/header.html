@@ -1,0 +1,42 @@
+<header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="{{ home_url | relative_url }}" class="site-title">PC / LAB</a>
+
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="{% if page.lang == 'ru' %}Главное меню{% else %}Main navigation{% endif %}">
+      {% for item in site.data.navigation.main %}
+        {% assign nav_url = item.url %}
+        {% if page.lang == 'ru' %}
+          {% if item.url == '/' %}
+            {% assign nav_url = '/ru/' %}
+          {% elsif item.url contains '/docs/' %}
+            {% assign nav_url = item.url | prepend: '/ru' %}
+          {% endif %}
+        {% endif %}
+        {% assign nav_active = false %}
+        {% if page.url == nav_url %}{% assign nav_active = true %}{% elsif item.url != '/' and page.url contains nav_url %}{% assign nav_active = true %}{% endif %}
+        {% if item.url == '/docs/' %}{% if page.url contains '/games/' or page.url contains '/hardware/' %}{% assign nav_active = false %}{% endif %}{% endif %}
+        <a href="{{ nav_url | relative_url }}"{% if nav_active %} class="active"{% endif %}{% if page.url == nav_url %} aria-current="page"{% endif %}>
+          {% if page.lang == 'ru' %}{{ item.title_ru }}{% else %}{{ item.title }}{% endif %}
+        </a>
+      {% endfor %}
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions-group">
+      <div class="language-switcher">
+        {% for lang in site.data.navigation.languages %}
+          {% if lang.code == page.lang %}
+            <span class="current-lang">{{ lang.name }}</span>
+          {% else %}
+            {% assign language_url = lang.url %}
+            {% if lang.code == 'en' %}{% assign language_url = english_url %}{% endif %}
+            {% if lang.code == 'ru' %}{% assign language_url = russian_url %}{% endif %}
+            <a href="{{ language_url | relative_url }}" class="lang-link">{{ lang.name }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</header>

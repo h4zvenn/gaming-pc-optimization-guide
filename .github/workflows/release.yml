@@ -64,7 +64,7 @@ jobs:
         run: |
           set -euo pipefail
           zip_name="GamingPCGuide-Diagnostics-${GITHUB_REF_NAME}.zip"
-          (cd tools && zip -r "../${zip_name}" . -x '*.log' '*.txt')
+          (cd site/downloads/tools && zip -r "../../../${zip_name}" . -x '*.log' '*.txt')
           sha256sum "${zip_name}" > "${zip_name}.sha256"
 
       - name: Publish GitHub Release

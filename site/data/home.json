@@ -1,0 +1,192 @@
+{
+  "en": {
+    "eyebrow": "PC / LAB — gaming setup guide",
+    "title": "Less guessing.",
+    "accent": "Better gaming.",
+    "intro": "Low FPS, stutters or input lag? Find the cause, change the right setting, and check whether it helped.",
+    "cta": "Find my starting point",
+    "secondary": "Browse all guides",
+    "panel": "Your first session",
+    "panelNote": "One problem. One change. One comparison.",
+    "steps": [
+      [
+        "Prepare",
+        "Save your settings and record how the game runs.",
+        "/docs/01-before-you-start.html"
+      ],
+      [
+        "Diagnose",
+        "Find what is limiting performance.",
+        "/docs/02-find-the-bottleneck.html"
+      ],
+      [
+        "Compare",
+        "Repeat the same scene before and after a change.",
+        "/docs/16-benchmark-templates.html"
+      ]
+    ],
+    "problemsTitle": "What gets in the way?",
+    "problemsIntro": "Choose the symptom you actually see. Start with a check, then decide what to change.",
+    "problems": [
+      [
+        "01",
+        "Low FPS",
+        "Find out what is holding your frame rate back.",
+        "/docs/02-find-the-bottleneck.html"
+      ],
+      [
+        "02",
+        "Stutters & freezes",
+        "Follow the checks for uneven frames and crashes.",
+        "/docs/15-troubleshooting-decision-trees.html"
+      ],
+      [
+        "03",
+        "Input lag",
+        "Check display, sync and graphics settings.",
+        "/docs/06-gpu-settings.html"
+      ],
+      [
+        "04",
+        "Heat & fan noise",
+        "Check temperatures, cooling and throttling.",
+        "/docs/10-temperatures-stability.html"
+      ],
+      [
+        "05",
+        "Ping & disconnects",
+        "Separate connection problems from rendering problems.",
+        "/docs/20-network-and-wifi.html"
+      ],
+      [
+        "06",
+        "A slow laptop",
+        "Check power limits, cooling and graphics switching.",
+        "/docs/21-laptops-and-handhelds.html"
+      ]
+    ],
+    "gamesTitle": "Go straight to your game.",
+    "gamesIntro": "Game-specific settings, checks and trade-offs.",
+    "gamesLink": "All game guides",
+    "toolTitle": "Keep the useful tools close.",
+    "tools": [
+      [
+        "PC settings",
+        "Windows, drivers, graphics and background apps.",
+        "Open the guide library",
+        "/docs/"
+      ],
+      [
+        "Your hardware",
+        "Choose the guide for your processor or graphics card.",
+        "Find my hardware",
+        "/docs/hardware/"
+      ],
+      [
+        "Files & tools",
+        "Checklists, a results worksheet and the diagnostics script.",
+        "Browse downloads",
+        "/downloads/"
+      ]
+    ],
+    "noteTitle": "Measure first. Keep what helps.",
+    "note": "You do not need to apply every tweak. Change one thing, repeat the test, and undo it if the result gets worse. This guide focuses on Windows 11; Windows 10 has a separate reference.",
+    "legacy": "Windows 10 notes",
+    "downloadNote": ""
+  },
+  "ru": {
+    "eyebrow": "PC / LAB — настройка игрового ПК",
+    "title": "Меньше догадок.",
+    "accent": "Больше игры.",
+    "intro": "Низкий FPS, рывки или задержка управления? Найди причину, измени нужную настройку и проверь результат.",
+    "cta": "Найти, с чего начать",
+    "secondary": "Все руководства",
+    "panel": "Твой первый шаг",
+    "panelNote": "Одна проблема. Одно изменение. Сравнение.",
+    "steps": [
+      [
+        "Подготовься",
+        "Сохрани настройки и запиши, как работает игра.",
+        "/docs/01-before-you-start.html"
+      ],
+      [
+        "Найди причину",
+        "Определи, что ограничивает производительность.",
+        "/docs/02-find-the-bottleneck.html"
+      ],
+      [
+        "Сравни результат",
+        "Повтори одну и ту же сцену до и после изменения.",
+        "/docs/16-benchmark-templates.html"
+      ]
+    ],
+    "problemsTitle": "Что мешает играть?",
+    "problemsIntro": "Выбери свой симптом. Сначала проверка, затем решение, что менять.",
+    "problems": [
+      [
+        "01",
+        "Низкий FPS",
+        "Выясни, что ограничивает частоту кадров.",
+        "/docs/02-find-the-bottleneck.html"
+      ],
+      [
+        "02",
+        "Рывки и зависания",
+        "Проверь причины неровного времени кадра и вылетов.",
+        "/docs/15-troubleshooting-decision-trees.html"
+      ],
+      [
+        "03",
+        "Задержка управления",
+        "Проверь экран, синхронизацию и настройки графики.",
+        "/docs/06-gpu-settings.html"
+      ],
+      [
+        "04",
+        "Нагрев и шум",
+        "Проверь температуры, охлаждение и троттлинг.",
+        "/docs/10-temperatures-stability.html"
+      ],
+      [
+        "05",
+        "Пинг и обрывы связи",
+        "Отдели проблемы соединения от проблем с отрисовкой.",
+        "/docs/20-network-and-wifi.html"
+      ],
+      [
+        "06",
+        "Тормозит ноутбук",
+        "Проверь питание, охлаждение и выбор видеокарты.",
+        "/docs/21-laptops-and-handhelds.html"
+      ]
+    ],
+    "gamesTitle": "Сразу к твоей игре.",
+    "gamesIntro": "Настройки и проверки с учётом конкретной игры.",
+    "gamesLink": "Все игры",
+    "toolTitle": "Всё нужное под рукой.",
+    "tools": [
+      [
+        "Настройки ПК",
+        "Windows, драйверы, графика и фоновые приложения.",
+        "Открыть руководства",
+        "/docs/"
+      ],
+      [
+        "Твоё оборудование",
+        "Выбери руководство для своего процессора или видеокарты.",
+        "Найти оборудование",
+        "/docs/hardware/"
+      ],
+      [
+        "Файлы и инструменты",
+        "Чек-листы, таблица результатов и скрипт диагностики.",
+        "Открыть загрузки · EN",
+        "/downloads/"
+      ]
+    ],
+    "noteTitle": "Проверяй. Оставляй то, что помогает.",
+    "note": "Не нужно применять все советы подряд. Измени одно, повтори тест и верни настройку назад, если стало хуже. Основная система в гайде — Windows 11; для Windows 10 есть отдельная справка.",
+    "legacy": "Справка по Windows 10",
+    "downloadNote": "Материалы в загрузках — на английском. Непереведённые руководства отмечены EN."
+  }
+}
