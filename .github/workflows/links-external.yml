@@ -33,7 +33,6 @@ jobs:
             --exclude-path '(^|[\\/])node_modules([\\/]|$)'
             --exclude '^file://'
             --exclude '^/'
-            --exclude '^https://modhub\.wargaming\.com/'
             --exclude '^https://h4zvenn\.github\.io/gaming-pc-optimization-guide(/|$)'
             './**/*.md'
 

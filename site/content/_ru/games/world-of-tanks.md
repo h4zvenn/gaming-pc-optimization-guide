@@ -37,7 +37,7 @@ permalink: /ru/docs/games/world-of-tanks.html
 
 ## Моды и целостность
 
-Используй только моды из официального [Wargaming Mod Hub](https://modhub.wargaming.com/).
+Используй только моды из официального [Wargaming Mod Hub](https://wgmods.net/).
 
 - Перед установкой XVM или других модов интерфейса проверь актуальную политику Wargaming в отношении модов.
 - Не используй моды с неизвестных сайтов, из каналов Discord или файлообменников.
