@@ -8,18 +8,13 @@ translation_key: hardware-guides
 permalink: /ru/docs/hardware/
 ---
 
-Выбери инструкцию для своего оборудования. Подробные страницы этого раздела пока доступны на английском; ссылки ниже ведут на существующие английские оригиналы.
+Выбери руководство для своего оборудования. На страницах собраны отдельные рекомендации по процессору и видеокарте каждого производителя.
 
-## Видеокарты
+## Руководства производителей
 
-- [NVIDIA GPU — на английском]({{ '/docs/hardware/nvidia.html' | relative_url }})
-- [AMD GPU — на английском]({{ '/docs/hardware/amd.html' | relative_url }})
-- [Intel GPU — на английском]({{ '/docs/hardware/intel-gpu.html' | relative_url }})
-
-## Процессоры
-
-- [AMD CPU — на английском]({{ '/docs/hardware/amd-cpu.html' | relative_url }})
-- [Intel CPU — на английском]({{ '/docs/hardware/intel-cpu.html' | relative_url }})
+- [Настройки CPU и GPU AMD]({{ '/ru/docs/hardware/amd.html' | relative_url }})
+- [Настройки CPU и GPU Intel]({{ '/ru/docs/hardware/intel.html' | relative_url }})
+- [Настройки GPU NVIDIA]({{ '/ru/docs/hardware/nvidia.html' | relative_url }})
 
 ## Подготовка и проверка
 

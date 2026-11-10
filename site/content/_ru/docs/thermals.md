@@ -122,6 +122,6 @@ NVMe SSD может нагреваться при установке игр, р�
 
 - [Поиск узкого места](02-find-the-bottleneck.html)
 - [BIOS и оборудование — EN](03-bios-and-hardware.html)
-- [Настройки AMD CPU — EN](../../docs/hardware/amd-cpu.html)
-- [Настройки Intel CPU — EN](../../docs/hardware/intel-cpu.html)
+- [Настройки CPU AMD]({{ '/ru/docs/hardware/amd.html' | relative_url }})
+- [Настройки CPU Intel]({{ '/ru/docs/hardware/intel.html' | relative_url }})
 - [Шаблоны бенчмарков — EN](../../docs/16-benchmark-templates.html)

@@ -162,24 +162,14 @@
         "ru": "Выбрать CPU / GPU"
       },
       {
-        "key": "hardware-amd-cpu",
-        "en": "AMD CPU",
-        "ru": "Процессор AMD"
-      },
-      {
-        "key": "hardware-intel-cpu",
-        "en": "Intel CPU",
-        "ru": "Процессор Intel"
-      },
-      {
         "key": "hardware-amd",
-        "en": "AMD GPU",
-        "ru": "Видеокарта AMD"
+        "en": "AMD CPU & GPU",
+        "ru": "CPU и GPU AMD"
       },
       {
-        "key": "hardware-intel-gpu",
-        "en": "Intel GPU",
-        "ru": "Видеокарта Intel"
+        "key": "hardware-intel",
+        "en": "Intel CPU & GPU",
+        "ru": "CPU и GPU Intel"
       },
       {
         "key": "hardware-nvidia",

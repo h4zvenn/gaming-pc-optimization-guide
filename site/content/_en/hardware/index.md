@@ -10,13 +10,8 @@ permalink: /docs/hardware/
 
 Use the guide for your hardware vendor alongside the shared safety and testing guidance.
 
-## Graphics cards
+## Vendor guides
 
+- [AMD CPU and GPU settings](amd.html)
+- [Intel CPU and GPU settings](intel.html)
 - [NVIDIA GPU settings](nvidia.html)
-- [AMD GPU settings](amd.html)
-- [Intel GPU settings](intel-gpu.html)
-
-## Processors
-
-- [AMD CPU settings](amd-cpu.html)
-- [Intel CPU settings](intel-cpu.html)

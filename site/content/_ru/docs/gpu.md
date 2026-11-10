@@ -59,9 +59,9 @@ VRR может называться G-SYNC, G-SYNC Compatible, FreeSync или A
 
 Параметры, названия функций и способы отката зависят от видеокарты:
 
-- [Настройки NVIDIA — EN](../../docs/hardware/nvidia.html): NVIDIA App/Control Panel, Reflex, DLSS и G-SYNC.
-- [Настройки AMD — EN](../../docs/hardware/amd.html): Adrenalin, Anti-Lag, FSR, FreeSync и Smart Access Memory.
-- [Настройки Intel — EN](../../docs/hardware/intel-gpu.html): графическое ПО Intel, XeSS и Resizable BAR.
+- [Настройки NVIDIA]({{ '/ru/docs/hardware/nvidia.html' | relative_url }}): NVIDIA App/Control Panel, Reflex, DLSS и G-SYNC.
+- [Настройки AMD]({{ '/ru/docs/hardware/amd.html' | relative_url }}): Adrenalin, Anti-Lag, FSR, FreeSync и Smart Access Memory.
+- [Настройки Intel]({{ '/ru/docs/hardware/intel.html' | relative_url }}): графическое ПО Intel, XeSS и Resizable BAR.
 
 ### Апскейлинг и генерация кадров
 
@@ -84,6 +84,6 @@ Frame Generation может увеличить отображаемый FPS, н�
 - [Поиск узкого места](02-find-the-bottleneck.html)
 - [Температуры и стабильность — EN](10-temperatures-stability.html)
 - [Шаблоны бенчмарков — EN](16-benchmark-templates.html)
-- [Настройки NVIDIA — EN](../../docs/hardware/nvidia.html)
-- [Настройки AMD — EN](../../docs/hardware/amd.html)
-- [Настройки Intel — EN](../../docs/hardware/intel-gpu.html)
+- [Настройки NVIDIA]({{ '/ru/docs/hardware/nvidia.html' | relative_url }})
+- [Настройки AMD]({{ '/ru/docs/hardware/amd.html' | relative_url }})
+- [Настройки Intel]({{ '/ru/docs/hardware/intel.html' | relative_url }})

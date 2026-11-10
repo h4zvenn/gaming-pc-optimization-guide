@@ -80,7 +80,7 @@ permalink: /ru/docs/03-bios-and-hardware.html
 
 По умолчанию память может работать на базовой скорости JEDEC, а не на заявленной скорости комплекта.
 
-Подробности о профилях памяти и рисках настройки процессора см. в руководствах по [процессорам AMD — EN](../../docs/hardware/amd-cpu.html) и [процессорам Intel — EN](../../docs/hardware/intel-cpu.html).
+Подробности о профилях памяти и рисках настройки процессора см. в руководствах по [CPU AMD]({{ '/ru/docs/hardware/amd.html' | relative_url }}) и [CPU Intel]({{ '/ru/docs/hardware/intel.html' | relative_url }}).
 
 ### Что включить
 
@@ -176,7 +176,7 @@ Auto
 
 ## Процессор: PBO, Curve Optimizer и разгон
 
-Общие правила безопасности приведены ниже. См. также руководства по [настройкам AMD CPU — EN](../../docs/hardware/amd-cpu.html) и [настройкам Intel CPU — EN](../../docs/hardware/intel-cpu.html).
+Общие правила безопасности приведены ниже. См. также руководства по [настройкам CPU AMD]({{ '/ru/docs/hardware/amd.html' | relative_url }}) и [настройкам CPU Intel]({{ '/ru/docs/hardware/intel.html' | relative_url }}).
 
 Это необязательная продвинутая настройка, в основном актуальная для некоторых процессоров AMD Ryzen.
 

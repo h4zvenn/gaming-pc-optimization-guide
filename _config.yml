@@ -4,6 +4,8 @@ url: https://h4zvenn.github.io
 baseurl: /gaming-pc-optimization-guide
 source: site
 markdown: kramdown
+plugins:
+  - jekyll-redirect-from
 data_dir: data
 includes_dir: includes
 layouts_dir: layouts

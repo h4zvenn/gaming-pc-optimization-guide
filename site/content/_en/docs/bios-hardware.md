@@ -89,7 +89,7 @@ If the system is stable and the new version has no relevant fixes, updating is n
 
 By default, RAM may run at JEDEC baseline speeds instead of the kit’s advertised speed.
 
-For platform-specific memory profiles and tuning risks, see [AMD CPU settings](hardware/amd-cpu.html) or [Intel CPU settings](hardware/intel-cpu.html).
+For platform-specific memory profiles and tuning risks, see [AMD CPU settings](hardware/amd.html) or [Intel CPU settings](hardware/intel.html).
 
 ### What to enable
 
@@ -191,7 +191,7 @@ Do not force Gen4 or Gen5 for “free FPS” if `Auto` already selects the maxim
 
 ## CPU: PBO, Curve Optimizer, and overclocking
 
-See the platform-specific guides for [AMD CPU settings](hardware/amd-cpu.html) and [Intel CPU settings](hardware/intel-cpu.html). The guidance below remains the shared safety baseline.
+See the platform-specific guides for [AMD CPU settings](hardware/amd.html) and [Intel CPU settings](hardware/intel.html). The guidance below remains the shared safety baseline.
 
 This is an optional advanced step, mostly relevant for some AMD Ryzen systems.
 

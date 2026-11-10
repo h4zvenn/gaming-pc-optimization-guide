@@ -370,6 +370,6 @@ Return the latest CPU, GPU, or memory tuning change to its saved value or stock 
 
 - [Find the Bottleneck](02-find-the-bottleneck.html)
 - [BIOS and Hardware](03-bios-and-hardware.html)
-- [AMD CPU settings](hardware/amd-cpu.html)
-- [Intel CPU settings](hardware/intel-cpu.html)
+- [AMD CPU settings](hardware/amd.html)
+- [Intel CPU settings](hardware/intel.html)
 - [What Not To Do](11-what-not-to-do.html)

@@ -141,7 +141,7 @@ Use the guide for your GPU vendor for control-panel features, driver tools, and 
 | --- | --- |
 | NVIDIA | [NVIDIA GPU settings](hardware/nvidia.html) |
 | AMD | [AMD GPU settings](hardware/amd.html) |
-| Intel | [Intel GPU settings](hardware/intel-gpu.html) |
+| Intel | [Intel GPU settings](hardware/intel.html) |
 
 Keep driver changes per game and start with defaults. Do not force global latency, synchronization, power, or image-quality overrides without a specific test.
 
@@ -223,6 +223,6 @@ Restore the last known-good per-game profile or the specific setting changed. If
 
 - [NVIDIA GPU settings](hardware/nvidia.html)
 - [AMD GPU settings](hardware/amd.html)
-- [Intel GPU settings](hardware/intel-gpu.html)
+- [Intel GPU settings](hardware/intel.html)
 - [Background Apps](07-background-apps.html)
 - [Benchmark Templates](16-benchmark-templates.html)
