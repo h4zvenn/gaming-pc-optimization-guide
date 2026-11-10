@@ -37,7 +37,9 @@ jobs:
 
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --destination ./_site
+        env:
+          JEKYLL_ENV: production
 
 
       - name: Prepare site for root-relative links
@@ -55,14 +57,11 @@ jobs:
           args: >-
             --no-progress
             --verbose
+            --offline
             --root-dir ./site-check
+            --index-files index.html
+            --remap "^https://h4zvenn\\.github\\.io/gaming-pc-optimization-guide/ file://${{ github.workspace }}/site-check/gaming-pc-optimization-guide/"
             --max-concurrency 4
-            --max-retries 2
-            --retry-wait-time 5
-            --timeout 30
-            --exclude '^mailto:'
-            --exclude '^https://modhub\.wargaming\.com/'
-            --exclude '^https://github\.com/h4zvenn/gaming-pc-optimization-guide/(issues|discussions)'
             './site-check/gaming-pc-optimization-guide/**/*.html'
 
 

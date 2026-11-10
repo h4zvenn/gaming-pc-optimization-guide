@@ -37,7 +37,7 @@ Do not install mods or change graphics settings until drivers, temperatures, bac
 
 ## Mods and integrity
 
-Use only mods from the official [Wargaming Mod Hub](https://modhub.wargaming.com/).
+Use only mods from the official [Wargaming Mod Hub](https://wgmods.net/).
 
 - Check the current Wargaming mod policy before installing XVM or other interface mods.
 - Do not use mods from unknown websites, Discord channels, or file-sharing services.
