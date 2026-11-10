@@ -31,11 +31,15 @@ jobs:
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
 
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1.0.13
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@7f797815d8adceb1c412e7abefdd1ab4abc47a5f # v1.335.0
         with:
-          source: ./site
-          destination: ./_site
+          ruby-version: "3.3"
+          bundler-cache: true
+
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
 
 
       - name: Upload artifact
