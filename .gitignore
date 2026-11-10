@@ -31,6 +31,8 @@ out/
 check-links.ps1
 link-check-results.csv
 migration-report.md
+site-check/
+lychee-*-report.txt
 
 # Python caches
 __pycache__/
