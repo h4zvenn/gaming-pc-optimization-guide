@@ -6,14 +6,16 @@ This project is documentation-first. Security-relevant content and guide optimiz
 
 ## Reporting a vulnerability
 
-If you identify a security risk, dangerous tweak, or unsafe recommendation in the guide:
+Do not post exploit details, proof of concept code, or personal diagnostic reports in a public issue.
 
-1. Do not post exploit details publicly.
-2. Open a GitHub issue using the unified template with the `security` label, or contact the maintainer directly.
-3. Include the following in your report:
+1. On the repository's **Security** tab, use **Report a vulnerability** if private vulnerability reporting is enabled.
+2. If that option is unavailable, open a public issue asking for a private contact channel. Do not include vulnerability details in that issue.
+3. In the private report, include:
    - Affected file or section path
    - Description of the security or system risk
    - Safer alternative or proposed fix
+
+GitHub only provides private vulnerability reports when the repository owner has enabled the feature. See GitHub's [private vulnerability reporting guide](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/report-privately).
 
 ## In-scope topics
 

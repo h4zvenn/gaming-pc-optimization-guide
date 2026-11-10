@@ -39,13 +39,17 @@ A contribution should meet these requirements:
 
 ## Documentation style
 
-### Page structure
+### Page structure and readability
 
-- Do not add a manual `# Title` at the top of a documentation page; Jekyll renders the title from front matter.
-- Start with a short explanation of the page’s purpose.
-- Use `##` for main sections and `###` for subsections.
-- Do not number headings unless sequence is essential.
-- End each page with a single `Next step` link where appropriate.
+- Do not add a body `# Title`; the layout renders it from front matter.
+- Open with the page's purpose, who it applies to, and the first useful action.
+- Put warnings before the risky step they apply to; do not repeat the same warning in every section.
+- Use action-oriented `##` headings and `###` only to split a long section. Number headings only when order matters.
+- Keep paragraphs focused on one idea and steps short enough to follow while using Windows.
+- Use a decision table for comparisons; use a checklist for a sequence the reader can complete.
+- For a setting change, state when to use it, what to record, how to verify it, and how to restore the original value.
+- End with one useful next step when the page is part of a sequence.
+- Add a table of contents for long pages with several major sections.
 
 ### Writing
 
@@ -54,6 +58,8 @@ A contribution should meet these requirements:
 - Recommend one change at a time.
 - Explain how to test the result.
 - Include a rollback path for risky changes.
+- Identify Windows, hardware, and game requirements before steps that depend on them.
+- Prefer a concise summary and links to the detailed procedure over duplicating long instructions.
 - Use tables for settings, comparisons, and decision rules.
 - Use `-` for unordered lists.
 
@@ -123,7 +129,7 @@ Requirements:
 Usage example:
 
 ```markdown
-
+![Rear case fan airflow direction]({{ '/assets/img/case-airflow.webp' | relative_url }})
 ```
 
 ## Local checks
@@ -144,14 +150,10 @@ bundle exec jekyll build
 Run Markdown lint:
 
 ```bash
-npx markdownlint-cli2 "docs/**/*.md"
+npm run lint
 ```
 
-Run the link checker:
-
-```bash
-powershell -ExecutionPolicy Bypass -File .\check-links.ps1
-```
+The GitHub Actions quality workflow checks local links, and the link-check workflow checks the built site.
 
 ## Releases
 

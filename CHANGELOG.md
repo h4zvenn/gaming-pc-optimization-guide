@@ -2,20 +2,6 @@
 
 All notable changes to this project are documented in this file.
 
-## Unreleased
-
-### Added
-
-- Added English and Russian Start Here pages, focused guide indexes, and shorter home-page navigation.
-- Added five vendor-specific GPU and CPU setup guides.
-- Added generated sitemap and crawler instructions, plus canonical, social-sharing, and structured-data metadata.
-- Added article breadcrumbs, table of contents, a left page-list sidebar, and localized copy buttons.
-- Redesigned the home pages (compact hero, problem tiles, guide lists) with a desktop-only layout (no viewport meta, media queries, or mobile menu) and an English-only main header; the EN/RU switcher stays in the header and each Russian doc links to its English original.
-- Added automatic previous/next navigation for system articles only.
-- Expanded the link checker to validate local links, image/source targets, and fragment identifiers.
-- Added substantive Russian translations for PowerShell diagnostics, GPU settings, temperature and stability, what-not-to-do, FAQ, quick-start presets, troubleshooting, and benchmark guides.
-- Bilingual safe optimization playbook with manual procedure cards, compatibility and risk notes, rollback steps, and repeatable validation guidance.
-
 ## v1.4.0 - 2026-11-01
 
 ### Added
@@ -235,3 +221,52 @@ All notable changes to this project are documented in this file.
 - Initial repository setup.
 - Initial optimization notes and draft documentation.
 - Basic project configuration.
+
+---
+
+## Unreleased
+
+### Added
+
+- Added English and Russian Start Here pages, focused guide indexes, and shorter home-page navigation.
+- Added five vendor-specific GPU and CPU setup guides.
+- Added generated sitemap and crawler instructions, plus canonical, social-sharing, and structured-data metadata.
+- Added article breadcrumbs, table of contents, a left page-list sidebar, and localized copy buttons.
+- Redesigned the home pages (compact hero, problem tiles, guide lists) with a desktop-only layout (no viewport meta, media queries, or mobile menu) and an English-only main header; the EN/RU switcher stays in the header and each Russian doc links to its English original.
+- Added automatic previous/next navigation for system articles only.
+- Expanded the link checker to validate local links, image/source targets, and fragment identifiers.
+- Added substantive Russian translations for PowerShell diagnostics, GPU settings, temperature and stability, what-not-to-do, FAQ, quick-start presets, troubleshooting, and benchmark guides.
+- Bilingual safe optimization playbook with manual procedure cards, compatibility and risk notes, rollback steps, and repeatable validation guidance.
+
+### Changed
+
+- Distinguished sidebar groups with uppercase headings and small decorative icons while keeping guide links lowercase in both languages.
+
+- Reorganized guide navigation around four beginner steps and collapsible task groups, with short bilingual labels, explicit English fallbacks, and a matching contents page.
+- Rebuilt both homepages with a shared bilingual layout, symptom-based entry points, localized game links, and a concise first-session checklist.
+- Added sidebar filtering, compact navigation, mobile header wrapping, localized skip links, and corrected section metadata.
+
+- Consolidated Jekyll presentation files under `site/` with explicit directory configuration; redesigned the site with a grouped left navigator, readable articles, responsive layouts, restrained motion, and no on-page contents panel.
+
+- Consolidated site styles from fourteen partials into eight named modules, preserving the compiled CSS cascade apart from unused search styles; moved contents-list and code-copy behavior from the HTML layout into `assets/js/site.js`.
+
+- Aligned both language collections: each homepage now lives beside its `docs/`, `games/`, and `hardware/` folders, with unchanged public URLs and updated repository guidance.
+- Separated the Russian homepage from the documentation contents page and documented the purpose and public URL of every section index.
+- Moved game and hardware sources beside `docs/` in both language collections, updated source-path guidance, and preserved published URLs through explicit permalinks.
+- Fixed the Russian utilities link, added a Russian hardware directory linking explicitly to available English guides, and stabilized the Russian diagnostics network anchor.
+- Consolidated repeated hardware and download catalogs, normalized directory links, and corrected localized home and section breadcrumb navigation.
+- Reviewed the downloads catalog in English, shortened worksheet and guide filenames, and documented resource behavior and rollback.
+- Replaced unsupported CS2 benchmark claims and the personalized active config with a disabled-by-default example; corrected benchmark metric units and added repeated-run records.
+- Documented diagnostic network traffic, report privacy, and query limitations; fixed WHEA message truncation and prevented report overwrites.
+- Numbered every documentation page consistently within its section and added explicit navigation order, preserving public URLs and matching EN/RU positions.
+- Corrected glossary definitions for low FPS metrics, GPU busy time, undervolting, and Resizable BAR; added matching Russian glossary and methodology pages.
+- Clarified that the methodology specifies an evidence standard rather than certifying every recommendation as benchmarked.
+- Renamed long English and Russian guide source files while keeping published URLs and translation keys stable.
+- Moved diagnostic scripts into `downloads/tools/` and updated download links, repository guidance, and release packaging.
+- Updated GitHub issue and Copilot guidance to match the current content structure.
+- Consolidated and clarified project structure and safety guidance.
+
+### Removed
+
+- Removed generated Jekyll output and cache, empty local dependency directories, and the duplicate `downloads/README.md`.
+- Removed the checked-in local Ruby dependency bundle; dependencies remain declared in `Gemfile` and `Gemfile.lock`.
