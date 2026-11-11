@@ -1,0 +1,45 @@
+title: Ultimate PC Gaming Optimization Guide 2026
+description: A hardware-agnostic, evidence-based guide to diagnosing and improving gaming PC performance safely.
+url: https://h4zvenn.github.io
+baseurl: /gaming-pc-optimization-guide
+markdown: kramdown
+plugins:
+  - jekyll-redirect-from
+data_dir: data
+includes_dir: includes
+layouts_dir: layouts
+
+sass:
+  sass_dir: styles
+  style: compressed
+
+collections_dir: content
+collections:
+  en:
+    output: true
+  ru:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: en
+  - scope:
+      path: ""
+      type: en
+    values:
+      lang: en
+      layout: doc
+  - scope:
+      path: ""
+      type: ru
+    values:
+      lang: ru
+      layout: doc
+
+exclude:
+  - data
+  - includes
+  - layouts
+  - styles
