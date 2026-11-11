@@ -33,6 +33,7 @@ link-check-results.csv
 migration-report.md
 site-check/
 lychee-*-report.txt
+unreales
 
 # Python caches
 __pycache__/

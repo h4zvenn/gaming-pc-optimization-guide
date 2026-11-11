@@ -21,3 +21,7 @@ permalink: /ru/docs/hardware/
 - [BIOS и оборудование]({{ '/ru/docs/03-bios-and-hardware.html' | relative_url }})
 - [Температуры и стабильность]({{ '/ru/docs/10-temperatures-stability.html' | relative_url }})
 - [Шаблоны измерений]({{ '/ru/docs/16-benchmark-templates.html' | relative_url }})
+
+## По модели процессора
+
+- [Ryzen 9800X3D: настройка PBO](9800x3d.html)

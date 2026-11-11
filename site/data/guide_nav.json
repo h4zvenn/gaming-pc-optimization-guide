@@ -167,6 +167,11 @@
         "ru": "CPU и GPU AMD"
       },
       {
+        "key": "hardware-9800x3d",
+        "en": "Ryzen 9800X3D tuning",
+        "ru": "Настройка Ryzen 9800X3D"
+      },
+      {
         "key": "hardware-intel",
         "en": "Intel CPU & GPU",
         "ru": "CPU и GPU Intel"

@@ -9,6 +9,10 @@ permalink: /ru/docs/games/cs2.html
 ---
 > Полное руководство по повышению производительности Counter-Strike 2 на Source 2: уменьши фризы, улучши равномерность времени кадров и добейся стабильного минимального FPS. Проверяй каждое изменение на своей системе.
 
+<a id="trust-factor"></a>
+
+**Материалы по CS2** · [Trust Factor]({{ '/ru/docs/games/cs2/trust-factor/' | relative_url }}) · [Конфиг и откат]({{ '/ru/docs/games/cs2/config/' | relative_url }})
+
 ## Применимость
 
 | Параметр | Значение |

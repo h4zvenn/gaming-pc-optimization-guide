@@ -14,7 +14,7 @@ Choose a game guide after checking the general system guidance. Settings can cha
 
 | Game | Guide | Status |
 | --- | --- | --- |
-| Counter-Strike 2 | [CS2](cs2.html) | 🟡 In progress |
+| Counter-Strike 2 | [Settings](cs2.html) · [Trust Factor](cs2/trust-factor/) · [Config](cs2/config/) | 🟡 In progress |
 | Minecraft: Java Edition | [Minecraft Java](minecraft-java.html) | 🟡 In progress |
 | PUBG: BATTLEGROUNDS | [PUBG](pubg.html) | 🟡 In progress |
 | VALORANT | [VALORANT](valorant.html) | 🟡 In progress |

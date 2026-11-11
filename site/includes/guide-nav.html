@@ -3,7 +3,7 @@
 {% for group in site.data.guide_nav %}
   {% assign active_group = false %}
   {% for entry in group.items %}
-    {% if entry.key == page.translation_key %}{% assign active_group = true %}{% endif %}
+    {% if entry.key == page.translation_key or entry.key == page.parent_guide %}{% assign active_group = true %}{% endif %}
   {% endfor %}
   {% if include.catalog %}
   <section class="guide-catalog-group"><h2>{{ group[nav_lang] }}</h2>

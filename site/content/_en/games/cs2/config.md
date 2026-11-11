@@ -1,17 +1,19 @@
 ---
 layout: doc
-title: "CS2 configuration template"
-description: "Use an optional editable CS2 configuration with measurements and rollback."
 lang: en
+title: "CS2: configuration example"
 translation_key: cs2-verified-configurations
-permalink: /downloads/configs/cs2-verified-configurations.html
+parent_guide: game-cs2
+permalink: /docs/games/cs2/config/
+redirect_from:
+  - /downloads/configs/cs2-verified-configurations.html
 ---
 
 This is a configuration example, not a benchmarked preset. No raw captures or reproducible protocol accompany the earlier performance tables, so those tables have been removed. This resource makes no FPS or anti-cheat compatibility guarantee.
 
 ## Files and behavior
 
-[Download cs2-autoexec.cfg](cs2-autoexec.cfg). All setting examples are commented out. Executing the unedited file only prints a console message. It does not set sensitivity, replace your crosshair, remap keys, automate inputs, or save settings with `host_writeconfig`.
+[Download cs2-autoexec.cfg]({{ '/downloads/configs/cs2-autoexec.cfg' | relative_url }}). All setting examples are commented out. Executing the unedited file only prints a console message. It does not set sensitivity, replace your crosshair, remap keys, automate inputs, or save settings with `host_writeconfig`.
 
 The example includes an optional FPS cap. Choose a value using measurements for your PC, game, and display; 144 FPS is not a universal target. Prefer the game's settings menu where practical.
 

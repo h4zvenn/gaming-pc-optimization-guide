@@ -15,7 +15,7 @@ Choose a resource for your task. Markdown pages provide instructions or workshee
 | --- | --- | --- |
 | [Optimization checklist](checklists/safe-optimization-checklist.html) | Prepare, measure one change, and plan rollback | Manual checklist; no commands |
 | [Benchmark worksheet](templates/performance-comparison-template.html) | Record test conditions and repeated runs | Copy into your own notes |
-| [CS2 configuration guide](configs/cs2-verified-configurations.html) | Use an optional editable CFG example | Only settings you explicitly enable and execute |
+| [CS2 configuration guide]({{ '/docs/games/cs2/config/' | relative_url }}) | Use an optional editable CFG example | Only settings you explicitly enable and execute |
 | [Windows diagnostics](tools/) | Inspect system information and selected events | No system settings changed; optional local report |
 
 ## Folder structure

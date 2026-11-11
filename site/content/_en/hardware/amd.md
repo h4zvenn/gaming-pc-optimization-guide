@@ -73,3 +73,7 @@ Download drivers and Adrenalin only from [AMD Support](https://www.amd.com/en/su
 - [AMD driver installation](https://www.amd.com/driverinstall)
 
 Check limits and feature support for your exact processor, graphics card, motherboard, and monitor.
+
+## Model-specific tuning
+
+- [Ryzen 9800X3D: PBO tuning](9800x3d.html)

@@ -15,3 +15,7 @@ Use the guide for your hardware vendor alongside the shared safety and testing g
 - [AMD CPU and GPU settings](amd.html)
 - [Intel CPU and GPU settings](intel.html)
 - [NVIDIA GPU settings](nvidia.html)
+
+## By processor model
+
+- [Ryzen 9800X3D: PBO tuning](9800x3d.html)

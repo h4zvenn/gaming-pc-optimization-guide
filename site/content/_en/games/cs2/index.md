@@ -9,6 +9,10 @@ permalink: /docs/games/cs2.html
 ---
 > Complete guide for improving Counter-Strike 2 performance on Source 2: reduce stutter, improve frame-time consistency, and establish a stable FPS floor. Test every change on your own system.
 
+<a id="trust-factor"></a>
+
+**More on CS2** · [Trust Factor]({{ '/docs/games/cs2/trust-factor/' | relative_url }}) · [Config setup and rollback]({{ '/docs/games/cs2/config/' | relative_url }})
+
 ## Applicability
 
 | Item | Value |

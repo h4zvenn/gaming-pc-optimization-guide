@@ -228,6 +228,8 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
+- Added an English and Russian Ryzen 7 9800X3D BIOS guide and organized CS2 into a performance guide with separate bilingual pages for Trust Factor and CFG setup. Existing article and download URLs remain available.
+
 - Added English and Russian Start Here pages, focused guide indexes, and shorter home-page navigation.
 - Added five vendor-specific GPU and CPU setup guides.
 - Added generated sitemap and crawler instructions, plus canonical, social-sharing, and structured-data metadata.
