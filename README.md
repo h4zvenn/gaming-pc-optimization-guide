@@ -1,5 +1,5 @@
 
-# PC Gaming Optimization Guide
+# Windows 11 Gaming Optimization Guide (2026)
 
 **Less guesswork. More consistent gameplay.**
 
